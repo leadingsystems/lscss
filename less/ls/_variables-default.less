@@ -22,6 +22,7 @@
 @ls-headings-font-weight: 700;
 @ls-headings-line-height: 1.2;
 @ls-headings-color: inherit;
+@ls-headings-margin-top: 1rem;
 
 @ls-h1-font-size: (@ls-font-size-base * 2.5);
 @ls-h2-font-size: (@ls-font-size-base * 2);
@@ -37,6 +38,13 @@
 @ls-h5-font-weight: @ls-headings-font-weight;
 @ls-h6-font-weight: @ls-headings-font-weight;
 
+@ls-h1-font-color: @ls-headings-color;
+@ls-h2-font-color: @ls-headings-color;
+@ls-h3-font-color: @ls-headings-color;
+@ls-h4-font-color: @ls-headings-color;
+@ls-h5-font-color: @ls-headings-color;
+@ls-h6-font-color: @ls-headings-color;
+
 @ls-h1-margin-bottom: (@ls-h1-font-size * 0.3);
 @ls-h2-margin-bottom: (@ls-h2-font-size * 0.3);
 @ls-h3-margin-bottom: (@ls-h3-font-size * 0.3);
@@ -46,6 +54,12 @@
 
 /* PARAGRAPHS */
 @ls-paragraph-margin-bottom: 1rem;
+@ls-paragraph-margin-top: 1rem;
+
+/* IMAGES */
+@ls-image-margin-bottom: 1rem;
+@ls-image-margin-top: 1rem;
+
 
 /* FARBEN */
 @ls-color-1: #203B8C;
@@ -61,7 +75,8 @@
 @ls-link-color-active: @ls-link-color-hover;
 @ls-link-color-visited: @ls-link-color;
 
-@ls-border-color: #e6e6e6;
+@ls-form-label-color: #9a9a9a;
+
 @ls-shadow-s: 2px 1px 6px #dddddd;
 @ls-shadow-l: 2px 1px 10px #dddddd;
 @ls-background-color: #ffffff;
@@ -70,8 +85,7 @@
 @ls-border-radius-s: 0.2rem;
 @ls-border-radius-l: 0.5rem;
 
-
-/*  */
+/* Diverses */
 @ls-list-style: disc;
 @ls-list-style-margin-left: 5rem;
 
@@ -82,3 +96,8 @@
 @ls-content-wrapper-max-width: 1200px;
 @ls-content-wrapper-padding: 1rem;
 
+@ls-article-margin: 10rem;
+
+/* COMPONENTS */
+/* BUTTON */
+@ls-button-font-size: @ls-font-size-base;

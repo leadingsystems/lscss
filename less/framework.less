@@ -1,17 +1,53 @@
-@import "ls/variables-default.less";
-@import "project/variables.less";
-@import "ls/reset.less";
-@import "ls/basics.less";
-@import "ls/grid.less";
+@import "ls/_variables-default.less";
+@import "project/_variables.less";
+@import "ls/_reset.less";
+@import "project/_fonts.less";
+@import "ls/_basics.less";
+@import "ls/_grid.less";
 
-/*
- * CHOOSE UTILITIES FOR PROJECT
- */
-@import "ls/contao-basics.less";
-@import "ls/utilities.less";
-@import "ls/components.less";
+/* EXTERNAL LIBRARIES */
+@import "fontawesome/_fontawesome.less";
+@import "fontawesome/_solid";
+
 
 /********************/
 
-@import "project/custom.less";
+/*
+ *    LSJS CSS
+ */
+@import "ls/_lsjs-loadingIndicator.less";
+
+/*
+ *    MERCONIS CSS
+ */
+@import "merconis/_merconis.less";
+
+
+/*
+ * CHOOSE COMPONENTS FOR PROJECT
+ */
+@import "ls/_contao-basics.less";
+@import "ls/_nav.less";
+@import "ls/_components.less";
+@import "ls/_utilities.less";
+
+
+/*
+ * Custom Styles for Project
+ */
+@import "project/_custom.less";
+
+/*
+Z-Index
+
+HEADER:             1000
+OffCanvasMenu       1500
+OffCanvasToggler    2000
+
+
+*/
+
+
+
+
 

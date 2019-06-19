@@ -1,0 +1,201 @@
+/*
+ *  ls-article-*    =   anwendbar auf .mod_article (Contao Artikel)
+ *  ls-content-*    =   anwendbar auf Content-Elemente / DIVs innerhalb des Artikels
+ */
+
+/* BUTTONS */
+.ls-button-1-mixin {
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  background-color: @ls-color-1;
+  box-shadow: @ls-shadow-s;
+  display: inline-block;
+  color: white;
+  border-radius: @ls-border-radius-s;
+  font-size: @ls-button-font-size;
+  border: 0;
+  cursor: pointer;
+  text-transform: lowercase;
+  transition: background-color 0.5s ease;
+}
+.ls-button-1-hover-mixin {
+  background-color: darken(@ls-color-1, 10%);
+}
+.ls-button-1 a {
+  .ls-button-1-mixin;
+}
+.ls-button-1 a:hover {
+  .ls-button-1-hover-mixin;
+}
+
+
+/* ARTICLE BOXES */
+.ls-article-box-1 {
+  margin-top: -10rem;
+  background-color: @ls-background-color;
+  padding: 5rem;
+  text-align: center;
+  max-width: @ls-content-wrapper-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ls-article-box-1 > * {
+    margin-bottom: 3rem;
+}
+
+/* IMAGES */
+.ls-img-wide-1 {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 50vw;
+  min-height: 40vh;
+  max-height: 70vh;
+}
+
+.ls-img-highlighted-1 {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+/* Container */
+
+/*    .ls-artice-container-1
+ *    Inhalt zentriert und als display: inline Elemente.
+ */
+.ls-article-container-1 {
+  text-align: center;
+}
+.ls-article-container-1 > * {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding-right: 2rem;
+}
+.ls-article-container-1 > *:last-child {
+  padding-right: 0;
+}
+
+/*    .ls-artice-container-2
+ *    Inhalt zentriert und max-width 1/2
+ */
+.ls-article-container-2 {
+  max-width: @ls-content-wrapper-max-width / 2;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ * Inhalt zentriert und max-width 0.7
+ */
+.ls-article-container-3 {
+  max-width: @ls-content-wrapper-max-width * 0.7;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ *  display all contents in one line
+ */
+.ls-line {
+  display: inline;
+}
+.ls-line div, .ls-line img, .ls-line p, .ls-line ul, .ls-line nav {
+  display: inline;
+}
+
+/*
+ * display: inline
+ */
+.ls-content-container-1 {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.ls-content-container-1 .block, .ls-content-container-1 .block p {
+  display: inline;
+}
+
+/*
+ * display: inline, align center
+ */
+.ls-content-container-2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.ls-content-container-2 .block, .ls-content-container-2 .block p {
+  display: inline;
+}
+
+
+/* FORM */
+
+// Einfaches Formular, wird angewendet auf wrapper um Formular
+.ls-form-3 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: @ls-content-wrapper-max-width / 2;
+}
+
+.ls-form-3 .widget:not(.widget-submit) {
+  border-bottom: 0.1rem @ls-border-color-1 solid;
+  padding-bottom: 1rem;
+  margin-bottom: 2em;
+}
+.ls-form-3 .widget::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.ls-form-3 label {
+  float: left;
+  width: 30%;
+  padding-right: 1rem;
+  color: @ls-form-label-color;
+}
+.ls-form-3 input, .ls-form-3 textarea, .ls-form-3 select {
+  border: 0;
+  float: right;
+  width: 70%;
+}
+.ls-form-3 .widget-submit {
+  text-align: center;
+}
+.ls-form-3 .widget-submit button {
+  .ls-button-1-mixin;
+}
+.ls-form-3 .widget-submit button:hover {
+  .ls-button-1-hover-mixin;
+}
+
+/* MEDIA QUERIES */
+
+/* S8 */
+@media (max-width: 800px) {
+  .ls-article-box-1 {
+    padding: 2rem;
+  }
+
+}
+
+/* S7 */
+@media (max-width: 700px) {
+  .ls-content-container-1 {
+    text-align: center;
+  }
+  .ls-content-container-1 .block {
+    display: block;
+  }
+}
+
+/* S6 */
+@media (max-width: 600px) {
+  .ls-form-3 label, .ls-form-3 input, .ls-form-3 textarea, .ls-form-3 select {
+    float: none;
+    width: 100%;
+  }
+  .ls-form-3 label {
+    padding-bottom: 0.5rem;
+  }
+}

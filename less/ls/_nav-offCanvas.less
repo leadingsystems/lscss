@@ -1,0 +1,150 @@
+/*
+MODULE "ocNavi"
+STYLE FILE "styles.css"
+*/
+
+/*
+ * -> off canvas navigation
+ */
+#lsOcNaviToggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  display: none;
+  z-index: 2000;
+}
+
+#lsOcNavi {
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  display: none;
+  box-shadow: 0 4px 10px #666666;
+  margin-bottom: 20px !important;
+}
+
+/*
+ * Show the off canvas toggler regardless of the screen size if
+ * the ocNavi is open. Otherwise the ocNavi could not be closed
+ * if the screen size has increased while the ocNavi is open.
+ */
+body.useOcNavi.lsOcNaviOpen #lsOcNaviToggler {
+  display: block;
+}
+
+#lsOcNaviToggler.lsOcNaviOpen {
+  position: fixed;
+}
+#lsOcNaviToggler.lsOcNaviOpen:after {
+  content: @fa-var-times;
+}
+
+@media only screen and (max-width: 768px) {
+  /*
+   * show the off canvas navigation so that it is always visible
+   * if the off canvas javascript is not in use
+   */
+  #lsOcNavi {
+    display: block;
+  }
+
+  /*
+   * hide the off canvas navigation if the
+   * off canvas javascript is in use
+   */
+  body.useOcNavi #lsOcNavi {
+    display: none;
+    margin-bottom: 0;
+  }
+
+  /*
+   * show the off canvas toggler if the
+   * off canvas javascript is in use
+   */
+  body.useOcNavi #lsOcNaviToggler {
+    display: block;
+  }
+}
+/*
+ * <- off canvas navigation
+ */
+
+
+
+
+
+
+#offCanvasContainer {
+  display: none;
+  padding-top: 40px !important;
+}
+
+#offCanvasContainer .ls_languageSelector {
+  left: 10px;
+  position: absolute;
+  top: 15px;
+}
+
+#lsOcNaviToggler {
+  .fa-icon;
+  .fas;
+}
+
+#lsOcNaviToggler::after {
+
+  content: @fa-var-bars;
+}
+
+/* use the following styles for a fixed positioned oc navi, deactivate it otherwise */
+#lsOcNavi {
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1500;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+/*
+#lsOcNaviToggler {
+  position: fixed !important;
+  z-index: 100001 !important;
+}
+/* */
+
+@media only screen and (max-width: 768px) {
+  #offCanvasContainer {
+    display: block;
+  }
+
+  @keyframes oc_height {
+    0% {
+      height: 0px;
+    }
+    50% {
+      height: 0px;
+    }
+    100% {
+      height: 150px;
+    }
+  }
+
+  @keyframes oc_opacity {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  :not(#lsOcNavi) > #offCanvasContainer {
+    overflow: hidden;
+    height: auto;
+    animation: oc_height 2.5s, oc_opacity 5s;
+  }
+}

@@ -1,0 +1,145 @@
+/*
+ * horizontal navigation ->
+ */
+.horizontalNavigation {
+  overflow: visible;
+  position: relative;
+}
+
+.horizontalNavigation ul {
+  margin: 0;
+}
+
+.horizontalNavigation ul li {
+  position: relative;
+  list-style: none;
+  margin-left: 0px;
+}
+
+.horizontalNavigation ul li span,
+.horizontalNavigation ul li a,
+.horizontalNavigation ul li strong {
+  text-decoration: none;
+  display: block;
+}
+
+.horizontalNavigation ul li.last a {
+  padding-right: 0px;
+}
+
+.horizontalNavigation ul.level_1 > li.last {
+  margin-right: 0px;
+}
+
+.horizontalNavigation ul.level_1 > li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.horizontalNavigation li:hover > span,
+.horizontalNavigation li:hover > a,
+.horizontalNavigation span:hover,
+.horizontalNavigation a:hover,
+.horizontalNavigation span.active,
+.horizontalNavigation a.active,
+.horizontalNavigation span.trail,
+.horizontalNavigation a.trail {
+}
+
+.horizontalNavigation:not(.useFoldedNavi) span.submenu,
+.horizontalNavigation:not(.useFoldedNavi) a.submenu {
+  background-image: url("../images/misc/arrow_right.png");
+  background-size: 10px;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.horizontalNavigation:not(.useFoldedNavi) span.trail,
+.horizontalNavigation:not(.useFoldedNavi) a.trail {
+  background-image: url("../images/misc/arrow_down.png");
+  background-size: 10px;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.horizontalNavigation .submenu ul {
+  position: absolute;
+  display: none;
+  background-color: rgba(255,255,255,1.0);
+  padding: 20px;
+}
+
+.horizontalNavigation:not(.useFoldedNavi) .submenu:hover > ul {
+  display: block;
+}
+
+.horizontalNavigation .submenu ul.level_2 {
+  top: 100%;
+  left: -60px;
+  text-align: left;
+}
+
+.horizontalNavigation .submenu ul.level_2 ul {
+  top: 0px;
+  left: 100%;
+}
+
+.horizontalNavigation .submenu ul li {
+  padding-top: 5px;
+  margin-right: 0px;
+  white-space: nowrap;
+}
+
+/*
+ * useMaxWidthNavi
+ */
+.horizontalNavigation.useMaxWidthNavi ul.level_2 {
+  padding: 20px;
+}
+
+.horizontalNavigation.useMaxWidthNavi ul.level_2 > li {
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  display: inline-block;
+  margin: 0 -6px 0 0 !important;
+  padding: 5px !important;
+  vertical-align: top;
+}
+
+.horizontalNavigation.useMaxWidthNavi ul.level_2 > li > a,
+.horizontalNavigation.useMaxWidthNavi ul.level_2 > li > span {
+  font-weight: bold;
+}
+
+.horizontalNavigation.useMaxWidthNavi ul.level_2 > li > a.submenu,
+.horizontalNavigation.useMaxWidthNavi ul.level_2 > li > span.submenu {
+  padding-bottom: 5px;
+}
+
+.horizontalNavigation.useMaxWidthNavi ul.level_2 ul.level_3 > li.submenu {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.horizontalNavigation.useMaxWidthNavi ul.level_3 > li > a.submenu,
+.horizontalNavigation.useMaxWidthNavi ul.level_3 > li > span.submenu {
+  padding-bottom: 5px;
+}
+
+.horizontalNavigation.useMaxWidthNavi ul.level_2 ul.level_3,
+.horizontalNavigation.useMaxWidthNavi ul.level_2 ul.level_4 {
+  display: block;
+  position: relative;
+  left: auto;
+  padding: 0;
+}
+
+.horizontalNavigation.useMaxWidthNavi ul.level_2 ul.level_3 > li,
+.horizontalNavigation.useMaxWidthNavi ul.level_2 ul.level_4 > li {
+  margin: 0;
+}
+
+
+/*
+ * <- horizontal navigation
+ */

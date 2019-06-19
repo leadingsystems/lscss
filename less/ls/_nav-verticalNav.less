@@ -1,0 +1,100 @@
+
+/*
+ * vertical navigation
+ */
+.verticalNavigation {
+  margin-bottom: 20px;
+}
+
+.verticalNavigation ul {
+  margin-bottom: 0px;
+}
+
+.verticalNavigation ul li {
+  list-style: none;
+  margin-left: 0px;
+}
+
+.verticalNavigation ul li a,
+.verticalNavigation ul li span {
+  display: block;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.verticalNavigation ul li:not(:last-child) {
+  border-bottom: 1px solid #CDCDCD;
+}
+
+.verticalNavigation ul.level_2 li:first-child {
+  border-top: 1px solid #CDCDCD;
+}
+
+.verticalNavigation ul li:last-child {
+  margin-bottom: 10px;
+}
+
+.verticalNavigation ul.level_2 li {
+  margin-left: 15px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.verticalNavigation ul.level_1 > li > a,
+.verticalNavigation ul.level_1 > li > span {
+  font-weight: normal;
+}
+
+.verticalNavigation ul li span,
+.verticalNavigation ul li a {
+  color: #777777;
+  font-size: 100%;
+  font-size: 0.85rem;
+  text-decoration: none;
+  padding-right: 15px;
+}
+
+.verticalNavigation li:hover > span,
+.verticalNavigation li:hover > a,
+.verticalNavigation span:hover,
+.verticalNavigation a:hover,
+.verticalNavigation span.active,
+.verticalNavigation a.active,
+.verticalNavigation span.trail,
+.verticalNavigation a.trail {
+  color: #BF3737;
+}
+
+.verticalNavigation ul li .ocSubnaviToggler {
+  display: block;
+  height: 23px;
+  width: 20px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  background-size: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #F4F4F4;
+}
+
+.verticalNavigation ul li.lsUnfoldClosed > .ocSubnaviToggler {
+  background-image: url("../images/misc/arrow_down.png");
+}
+
+.verticalNavigation ul li.lsUnfoldOpen > .ocSubnaviToggler {
+  background-image: url("../images/misc/arrow_up.png");
+}
+
+.verticalNavigation ul li.lsUnfoldOpen.lsUnfoldRunning > .ocSubnaviToggler {
+  background-image: url("../images/misc/arrow_down.png");
+}
+
+.verticalNavigation ul li.lsUnfoldClosed.lsUnfoldRunning > .ocSubnaviToggler {
+  background-image: url("../images/misc/arrow_up.png");
+}
+/*
+ * <- vertical navigation
+ */

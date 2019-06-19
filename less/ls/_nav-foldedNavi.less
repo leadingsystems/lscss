@@ -1,0 +1,48 @@
+/*
+MODULE "foldedNavi"
+STYLE FILE "styles.css"
+*/
+
+.useFoldedNavi {
+}
+
+.useFoldedNavi .foldedNaviToggler {
+  position: absolute;
+  right: 0px;
+  border: 0;
+  padding: 2px;
+  cursor: pointer;
+  .fa-icon;
+  .fas;
+}
+
+.useFoldedNavi .foldedNaviToggler.lsUnfoldClosed::after {
+  content: @fa-var-angle-right;
+}
+
+.useFoldedNavi .foldedNaviToggler.lsUnfoldClosed.lsUnfoldRunning::after {
+  content: @fa-var-angle-down;
+}
+
+.useFoldedNavi .foldedNaviToggler.lsUnfoldOpen::after {
+  content: @fa-var-angle-down;
+}
+
+.useFoldedNavi .foldedNaviToggler.lsUnfoldOpen.lsUnfoldRunning::after {
+  content: @fa-var-angle-right;
+}
+
+.useFoldedNavi ul li {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.useFoldedNavi ul.level_1 ul {
+  display: none;
+  overflow: hidden;
+}
+
+.useFoldedNavi ul.level_2 li {
+  margin-left: 15px;
+}

@@ -1,0 +1,58 @@
+.template_productDetails {
+  .ls-content-wrapper
+}
+
+.template_productDetails .productInfoBlock01 {
+  display: none;
+}
+.template_productDetails .watchlistContainer.notInMyWatchlist {
+  display: none;
+}
+
+.template_productDetails .productInfoBlock03 {
+  width: 50%;
+  float: left;
+}
+
+.template_productDetails .productInfoBlock03:after {
+  //CLEARFIX
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.template_productDetails .productInfoBlock04:after {
+  //CLEARFIX
+  content: "";
+  display: table;
+  clear: both;
+}
+.template_productDetails .productInfoBlock05:after {
+  //CLEARFIX
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.template_productDetails .productInfoBlock05 {
+  max-width: 80rem;
+  margin: auto;
+}
+  .template_productDetails .productInfoBlock05 .description {
+  float: left;
+}
+.template_productDetails .productInfoBlock05 .description::before {
+  content: "Beschreibung";
+  width: 15rem;
+  padding-top: 11rem;
+  background-image: url('/files/ls-basic/img/Element 12.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  float: left;
+  color: @ls-color-2;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.8rem;
+}

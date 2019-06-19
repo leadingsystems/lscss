@@ -1,0 +1,162 @@
+/* Fensterbänke Shop */
+
+footer {
+  border-top: 1px #eee solid;
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+header {
+  padding-bottom: 1rem;
+}
+
+footer h4 {
+  font-size: 1.8rem;
+  color: @ls-color-2;
+  font-weight: 500;
+}
+footer p, footer li {
+  font-size: 1.5rem;
+  color: @ls-color-2;
+}
+h2 {
+  font-family: Lora, serif;
+  font-weight: 700;
+  font-size: 5rem;
+  text-align: center;
+}
+
+footer strong {
+  font-size: 1.8rem;
+  color: @ls-color-2;
+  font-weight: 500;
+}
+
+/* NAV */
+nav {
+  color: @ls-color-2;
+}
+
+.horizontalNavigation .submenu ul {
+  border-bottom: 1rem solid @ls-border-color-1;
+  padding-top: 4rem;
+}
+
+#offCanvasNavigation {
+  min-height: 90vh;
+  padding-top: 10vh;
+}
+
+#fb-offCanvasContainer {
+  max-width: 60rem;
+  margin: auto;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+@media (max-width: 700px) {
+  .fb-OcNavSpalte {
+    max-width: 30rem;
+    margin: auto;
+    float: none;
+  }
+}
+
+#fb-offCanvasContainer li {
+  margin-left: 0;
+}
+#fb-offCanvasContainer .level_2{
+  font-size: 1.6rem;
+}
+#fb-offCanvasContainer strong {
+  font-weight: inherit;
+  color: @ls-color-1;
+}
+
+
+
+/* HEADER */
+#header-line-1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  height: 6rem;
+}
+  #logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  #container-1 {
+    position: absolute;
+    top: 0;
+    left: 20rem;
+  }
+  #container-1 a {
+    color: @ls-color-3;
+    font-size: 1.4rem;
+  }
+  #container-1 .ce_hyperlink:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+  #container-2 {
+    position: absolute;
+    bottom: 0;
+    left: 20rem;
+  }
+  #lsOcNaviToggler {
+    position: absolute;
+    top: 3rem;
+    right: 10%;
+    font-size: 3rem;
+    color: @ls-color-2;
+  }
+
+
+/* Fensterbänke Elemente */
+.ls-article-box-1 {
+  border-bottom: @ls-border-color-1 2rem solid;
+}
+
+
+/* ERWEITERUNGEN ZU COMPONENTS */
+
+.ls-article-container-2 {
+  max-width: 800px;
+  text-align: center;
+}
+
+.ls-article-container-2 p {
+  .ls-text-special-1;
+}
+
+.ls-content-container-1 p {
+  .ls-text-special-2;
+}
+.ls-content-container-1 .ce_image {
+  margin-right: 1rem;
+}
+
+
+/* UNWICHTIG */
+.ls-placeholder {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  text-align: center;
+  background-color: #dddddd;
+}
+
+.test-bg {
+  background-color: #eee;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 700px) {
+  .ls-content-container-1 .ce_image {
+    margin-right: 0;
+  }
+}
