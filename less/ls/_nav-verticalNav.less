@@ -2,71 +2,84 @@
 /*
  * vertical navigation
  */
-.verticalNavigation {
+nav.verticalNavigation,
+.verticalNavigation > nav {
   margin-bottom: 20px;
 }
 
-.verticalNavigation ul {
+nav.verticalNavigation ul,
+.verticalNavigation > nav ul {
   margin-bottom: 0px;
 }
 
-.verticalNavigation ul li {
+nav.verticalNavigation ul li,
+.verticalNavigation > nav ul li {
   list-style: none;
   margin-left: 0px;
 }
 
-.verticalNavigation ul li a,
-.verticalNavigation ul li span {
+nav.verticalNavigation ul li a,
+.verticalNavigation > nav ul li a,
+nav.verticalNavigation ul li span,
+.verticalNavigation > nav ul li span {
   display: block;
   position: relative;
-  padding-top: 5px;
-  padding-bottom: 5px;
 }
 
-.verticalNavigation ul li:not(:last-child) {
-  border-bottom: 1px solid #CDCDCD;
+nav.verticalNavigation ul li:not(:last-child),
+.verticalNavigation > nav ul li:not(:last-child) {
 }
 
-.verticalNavigation ul.level_2 li:first-child {
-  border-top: 1px solid #CDCDCD;
+nav.verticalNavigation ul.level_2 li:first-child ,
+.verticalNavigation > nav ul.level_2 li:first-child {
 }
 
-.verticalNavigation ul li:last-child {
+nav.verticalNavigation ul li:last-child,
+.verticalNavigation > nav ul li:last-child {
   margin-bottom: 10px;
 }
 
-.verticalNavigation ul.level_2 li {
+nav.verticalNavigation ul.level_2 li,
+.verticalNavigation > nav ul.level_2 li {
   margin-left: 15px;
   margin-right: 0px;
   margin-bottom: 0px;
 }
 
-.verticalNavigation ul.level_1 > li > a,
-.verticalNavigation ul.level_1 > li > span {
+nav.verticalNavigation ul.level_1 > li > a,
+.verticalNavigation > nav ul.level_1 > li > a,
+nav.verticalNavigation ul.level_1 > li > span,
+.verticalNavigation > nav ul.level_1 > li > span {
   font-weight: normal;
 }
 
-.verticalNavigation ul li span,
-.verticalNavigation ul li a {
-  color: #777777;
-  font-size: 100%;
-  font-size: 0.85rem;
+nav.verticalNavigation ul li span,
+.verticalNavigation > nav ul li span,
+nav.verticalNavigation ul li a,
+.verticalNavigation > nav ul li a {
   text-decoration: none;
-  padding-right: 15px;
 }
 
-.verticalNavigation li:hover > span,
-.verticalNavigation li:hover > a,
-.verticalNavigation span:hover,
-.verticalNavigation a:hover,
-.verticalNavigation span.active,
-.verticalNavigation a.active,
-.verticalNavigation span.trail,
-.verticalNavigation a.trail {
-  color: #BF3737;
+nav.verticalNavigation li:hover > span,
+.verticalNavigation > nav li:hover > span,
+nav.verticalNavigation li:hover > a,
+.verticalNavigation > nav li:hover > a,
+nav.verticalNavigation span:hover,
+.verticalNavigation > nav span:hover,
+nav.verticalNavigation a:hover,
+.verticalNavigation > nav a:hover,
+nav.verticalNavigation span.active,
+.verticalNavigation > nav span.active,
+nav.verticalNavigation a.active,
+.verticalNavigation > nav a.active,
+nav.verticalNavigation span.trail,
+.verticalNavigation > nav span.trail,
+nav.verticalNavigation a.trail,
+.verticalNavigation > nav a.trail {
 }
 
-.verticalNavigation ul li .ocSubnaviToggler {
+nav.verticalNavigation ul li .ocSubnaviToggler,
+.verticalNavigation > nav ul li .ocSubnaviToggler {
   display: block;
   height: 23px;
   width: 20px;
@@ -80,19 +93,23 @@
   background-color: #F4F4F4;
 }
 
-.verticalNavigation ul li.lsUnfoldClosed > .ocSubnaviToggler {
+nav.verticalNavigation ul li.lsUnfoldClosed > .ocSubnaviToggler,
+.verticalNavigation > nav ul li.lsUnfoldClosed > .ocSubnaviToggler {
   background-image: url("../images/misc/arrow_down.png");
 }
 
-.verticalNavigation ul li.lsUnfoldOpen > .ocSubnaviToggler {
+nav.verticalNavigation ul li.lsUnfoldOpen > .ocSubnaviToggler,
+.verticalNavigation > nav ul li.lsUnfoldOpen > .ocSubnaviToggler {
   background-image: url("../images/misc/arrow_up.png");
 }
 
-.verticalNavigation ul li.lsUnfoldOpen.lsUnfoldRunning > .ocSubnaviToggler {
+nav.verticalNavigation ul li.lsUnfoldOpen.lsUnfoldRunning > .ocSubnaviToggler,
+.verticalNavigation > nav ul li.lsUnfoldOpen.lsUnfoldRunning > .ocSubnaviToggler {
   background-image: url("../images/misc/arrow_down.png");
 }
 
-.verticalNavigation ul li.lsUnfoldClosed.lsUnfoldRunning > .ocSubnaviToggler {
+nav.verticalNavigation ul li.lsUnfoldClosed.lsUnfoldRunning > .ocSubnaviToggler,
+.verticalNavigation > nav ul li.lsUnfoldClosed.lsUnfoldRunning > .ocSubnaviToggler {
   background-image: url("../images/misc/arrow_up.png");
 }
 /*
