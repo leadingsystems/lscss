@@ -5,15 +5,17 @@
   background-color: @ls-color-3;
 }
 
-#header-wrapper {
-  position: absolute;
-  width: @ls-content-wrapper-max-width;
-  height: 12rem;
-  bottom: 0;
+#header .inside {
+  position: relative;
+  top: 3rem;
 }
 
 #header-wrapper > * {
   position: absolute;
+}
+
+#header-wrapper .nav-misc li {
+  margin-right: 1rem;
 }
 
 #header-logo {
@@ -23,7 +25,7 @@
 
 #header-email {
   bottom: 7rem;
-  left: 62.3rem;
+  right: 30%;
   font-weight: @ls-font-weight-bold;
 }
 
@@ -41,7 +43,7 @@
 
 #header-hotline {
   bottom: 4rem;
-  left: 88rem;
+  right: 18%;
   font-weight: @ls-font-weight-bold;
 }
 
@@ -64,13 +66,13 @@
 }
 
 #header-hotline > .label {
-  font-weight: @ls-font-weight-normal;
+  font-weight: @ls-font-weight-medium;
   margin-top: 0.5rem;
 }
 
 #header-search {
   bottom: 4rem;
-  left: 105rem;
+  right: 10%;
   font-weight: @ls-font-weight-bold;
 }
 
@@ -93,13 +95,13 @@
 }
 
 #header-search > .label {
-  font-weight: @ls-font-weight-normal;
+  font-weight: @ls-font-weight-medium;
   margin-top: 0.5rem;
 }
 
 #header-cart {
   bottom: 4rem;
-  left: 118rem;
+  right: 0;
   font-weight: @ls-font-weight-bold;
 }
 
@@ -122,19 +124,19 @@
 }
 
 #header-cart > .label {
-  font-weight: @ls-font-weight-normal;
+  font-weight: @ls-font-weight-medium;
   margin-top: 0.5rem;
 }
 
 #header .nav-categories {
   bottom: 0.3rem;
-  left: 30rem;
+  left: 25%;
   font-weight: @ls-font-weight-medium;
 }
 
 #header .nav-misc {
   bottom: 4rem;
-  left: 30rem;
+  left: 25%;
   font-weight: @ls-font-weight-medium;
 }
 
