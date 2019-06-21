@@ -1,0 +1,140 @@
+#header {
+  position: relative;
+  height: 3rem;
+  margin-top: 9rem;
+  background-color: @ls-color-3;
+}
+
+#header-wrapper {
+  position: absolute;
+  width: @ls-content-wrapper-max-width;
+  height: 12rem;
+  bottom: 0;
+}
+
+#header-wrapper > * {
+  position: absolute;
+}
+
+#header-logo {
+  bottom: 0;
+  left: 0;
+}
+
+#header-email {
+  bottom: 7rem;
+  left: 62.3rem;
+  font-weight: @ls-font-weight-bold;
+}
+
+#header-email::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: .5rem;
+  content: @fa-var-envelope;
+}
+
+#header-hotline {
+  bottom: 4rem;
+  left: 88rem;
+  font-weight: @ls-font-weight-bold;
+}
+
+#header-hotline > .value,
+#header-hotline > .label {
+  display: block;
+  text-align: center;
+}
+
+#header-hotline > .value a::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: .5rem;
+  content: @fa-var-phone-alt;
+}
+
+#header-hotline > .label {
+  font-weight: @ls-font-weight-normal;
+  margin-top: 0.5rem;
+}
+
+#header-search {
+  bottom: 4rem;
+  left: 105rem;
+  font-weight: @ls-font-weight-bold;
+}
+
+#header-search > .value,
+#header-search > .label {
+  display: block;
+  text-align: center;
+}
+
+#header-search > .value::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: .5rem;
+  content: @fa-var-search;
+}
+
+#header-search > .label {
+  font-weight: @ls-font-weight-normal;
+  margin-top: 0.5rem;
+}
+
+#header-cart {
+  bottom: 4rem;
+  left: 118rem;
+  font-weight: @ls-font-weight-bold;
+}
+
+#header-cart > .value,
+#header-cart > .label {
+  display: block;
+  text-align: center;
+}
+
+#header-cart > .value::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: .5rem;
+  content: @fa-var-shopping-cart;
+}
+
+#header-cart > .label {
+  font-weight: @ls-font-weight-normal;
+  margin-top: 0.5rem;
+}
+
+#header .nav-categories {
+  bottom: 0.3rem;
+  left: 30rem;
+  font-weight: @ls-font-weight-medium;
+}
+
+#header .nav-misc {
+  bottom: 4rem;
+  left: 30rem;
+  font-weight: @ls-font-weight-medium;
+}
+
