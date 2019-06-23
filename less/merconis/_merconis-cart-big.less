@@ -95,8 +95,26 @@
     }
   }
 
-  .field .field-label {
+  .calculation {
+    .field {
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+
+  .field:not(.info) .field-label {
     font-weight: @ls-font-weight-bold;
+  }
+
+  .field.info {
+    color: @ls-color-2;
+    font-style: italic;
+    font-size: @ls-font-size-small;
+  }
+
+  .field.info .field-label {
+    padding-left: 2rem;
   }
 }
 
