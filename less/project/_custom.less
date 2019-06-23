@@ -1,2 +1,45 @@
 @import "_custom-header.less";
 @import "_custom-header-responsive.less";
+@import "_custom-oc-navi.less";
+@import "_custom-footer.less";
+@import "_custom-footer-responsive.less";
+@import "_custom-components-image-teaser.less";
+
+#main {
+  min-height: 20rem;
+}
+
+h6 {
+  font-family: @ls-font-family-sans-serif;
+}
+
+a.button,
+button {
+  border-radius: @ls-border-radius-s;
+  border: none;
+  box-shadow: @ls-shadow-button;
+  padding: 0.5rem 1rem;
+  background-color: @ls-color-3;
+  cursor: pointer;
+  font-weight: @ls-font-weight-medium;
+  line-height: 2.2rem;
+  min-width: 16rem;
+  text-align: center;
+}
+
+a.button::after,
+button::after {
+  .fa-icon;
+  .fas;
+  content: @fa-var-caret-right;
+  margin-left: 0.5rem;
+  color: @ls-color-4;
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 9px;
+  }
+}
