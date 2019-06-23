@@ -15,12 +15,17 @@ h6 {
 
 a.button,
 button {
+  cursor: pointer;
+  padding: 0;
+}
+
+a.button,
+button:not(.no-button) {
   border-radius: @ls-border-radius-s;
   border: none;
   box-shadow: @ls-shadow-button;
   padding: 0.5rem 1rem;
   background-color: @ls-color-3;
-  cursor: pointer;
   font-weight: @ls-font-weight-medium;
   line-height: 2.2rem;
   min-width: 16rem;
@@ -31,11 +36,23 @@ a.button::after,
 button::after {
   .fa-icon;
   .fas;
+}
+
+a.button::after,
+button:not(.no-button)::after {
   content: @fa-var-caret-right;
   margin-left: 0.5rem;
   color: @ls-color-4;
   font-size: 2rem;
   vertical-align: middle;
+}
+
+button.no-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
 }
 
 @media screen and (max-width: 700px) {
