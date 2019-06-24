@@ -101,6 +101,69 @@
       justify-content: space-between;
     }
 
+    .field-group {
+      margin-bottom: 2rem;
+    }
+
+    .field-group.coupons {
+      [data-lsjs-element="toggler"] {
+        cursor: pointer;
+      }
+
+      [data-lsjs-element="toggler"]::after {
+        .fa-icon;
+        .fas;
+        cursor: pointer;
+      }
+
+      .formUseCoupon {
+        margin-bottom: 2rem;
+
+        button {
+          margin-left: 1rem;
+        }
+
+        button::after {
+          content: @fa-var-check;
+        }
+
+        .errors {
+          position: absolute;
+        }
+      }
+
+      a.delete-coupon::after {
+        .fa-icon;
+        .fas;
+        content: @fa-var-trash-alt;
+        cursor: pointer;
+        margin-left: 1rem;
+      }
+
+      .field.coupon-details {
+        flex-wrap: wrap;
+
+        .field-description {
+          width: 50%;
+          margin-right: 50%;
+          padding-left: 2rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .field-group.coupons[data-misc-highlighted="no"] {
+      [data-lsjs-element="toggler"]::after {
+        content: @fa-var-caret-down;
+      }
+    }
+
+    .field-group.coupons[data-misc-highlighted="yes"] {
+      [data-lsjs-element="toggler"]::after {
+        content: @fa-var-caret-up;
+      }
+    }
   }
 
   .field:not(.info) .field-label {
@@ -115,6 +178,10 @@
 
   .field.info .field-label {
     padding-left: 2rem;
+  }
+
+  [data-misc-highlighted="no"] .hideWhenNotHighlighted {
+    display: none;
   }
 }
 
