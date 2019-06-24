@@ -1,4 +1,4 @@
-.template_cart_big {
+#cart-checkout {
   .cart-items {
      .shopProduct:nth-child(odd) {
       background-color: @ls-color-5;
@@ -164,6 +164,11 @@
         content: @fa-var-caret-up;
       }
     }
+
+    .field-group.invoiced-amount .field:not(.info) {
+      font-size: @ls-h3-font-size;
+      font-weight: @ls-font-weight-bold;
+    }
   }
 
   .field:not(.info) .field-label {
@@ -183,10 +188,128 @@
   [data-misc-highlighted="no"] .hideWhenNotHighlighted {
     display: none;
   }
+
+  .checkoutStep:not(:first-child) {
+    margin-top: 5rem;
+  }
+
+  fieldset.useDeviantShippingAddress {
+    margin-top: 2rem;
+
+    [data-lsjs-element="deviantShippingAddress"] {
+      margin-top: 2rem;
+    }
+  }
+
+  .widget.widget-text,
+  .widget.widget-password,
+  .widget.widget-select {
+    display: flex;
+
+    label {
+      width: 33.3%;
+      max-width: 20rem;
+      margin-right: 1rem;
+    }
+
+    input,
+    select {
+      width: 66.6%;
+      max-width: 50rem;
+    }
+  }
+
+  .widget.widget-submit {
+    margin-top: 2rem;
+  }
+
+  .checkoutStep.formClosed {
+    position: relative;
+
+    [data-lsjs-element="openFormToggler"] {
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+    }
+
+    [data-lsjs-element="openFormToggler"]::after {
+      .fa-icon;
+      .fas;
+      content: @fa-var-edit;
+      cursor: pointer;
+    }
+
+    .headlineMainSection {
+      margin-left: 5rem;
+    }
+
+    button.submit {
+      display: none;
+    }
+  }
+
+  .shippingSelection,
+  .paymentSelection {
+    display: flex;
+    flex-direction: column;
+
+    > span {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    > span.selected {
+      background-color: @ls-color-5;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    a {
+      display: flex;
+
+      .title {
+        width: 33.3%;
+        margin-right: 2rem;
+      }
+    }
+
+    .formPaymentAndShippingMethodAdditionalData,
+    .customPaymentMethodUserInterface {
+      margin-left: calc(33.3% + 2rem);
+      padding-right: 2rem;
+    }
+
+    .formPaymentAndShippingMethodAdditionalData {
+      .success {
+        display: none;
+      }
+    }
+  }
+  
+  .continueCheckout {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+
+    a.button {
+      font-weight: @ls-font-weight-bold;
+    }
+  }
+
+  .confirmOrder form {
+    text-align: center;
+
+    button.buttonBuy {
+      font-weight: @ls-font-weight-bold;
+      font-size: @ls-h3-font-size;
+      padding: 1.5rem 6rem;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 @media screen and (max-width: 700px) {
-  .template_cart_big {
+  #cart-checkout {
     .cart-items {
       .shopProduct {
         .product-info {
