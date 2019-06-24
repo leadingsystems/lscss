@@ -1,11 +1,32 @@
-.flexWidget {
-  display: inline;
-}
-
 // This is only being used to make all elements with the class "ls_icon" visible so that they can be rewritten/restyled without this class
 .ls_icon::after {
   .fa-icon;
   .fas;
   content: @fa-var-bug;
   color: #FF0000;
+}
+
+.flexWidget {
+  display: inline;
+}
+
+.back-button-box {
+  margin-bottom: 2rem;
+  text-align: right;
+}
+
+button.back::after,
+a.button.back::after {
+  content: none;
+}
+
+button.back::before,
+a.button.back::before {
+  .fa-icon;
+  .fas;
+  content: @fa-var-caret-left;
+  margin-right: 0.5rem;
+  color: @ls-color-4;
+  font-size: 2rem;
+  vertical-align: middle;
 }
