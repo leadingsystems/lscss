@@ -23,13 +23,10 @@
   position: absolute;
 }
 
-#header-wrapper .nav-misc li {
-  margin-right: 1rem;
-}
-
 #header-logo {
   bottom: 0;
   left: 0;
+  z-index: 10001;
 }
 
 #header-email {
@@ -139,13 +136,17 @@
 
 #header .nav-categories {
   bottom: 0.3rem;
-  left: 25%;
+  left: 0;
+  right: 0;
+  padding-left: 25%;
   font-weight: @ls-font-weight-medium;
 }
 
 #header .nav-misc {
   bottom: 4rem;
-  left: 25%;
+  left: 0;
+  right: 0;
+  padding-left: 25%;
   font-weight: @ls-font-weight-medium;
   z-index: 10000;
 }
