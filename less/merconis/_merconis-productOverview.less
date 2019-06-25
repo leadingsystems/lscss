@@ -1,26 +1,15 @@
 .productOverview {
   .ls-content-wrapper;
 
-  .productInfoBlock03 {
-    display: none;
+  .productList {
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .shopProduct {
+        width: 20%;
+      }
+    }
   }
-  .productInfoBlock05 {
-    display: none;
-  }
-}
-
-.productList:after {
-  //CLEARFIX
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.productList .shopProduct {
-  width: 25%;
-  float: left;
-}
-
-.userSortingForm {
-  display: none;
 }

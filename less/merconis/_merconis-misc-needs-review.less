@@ -30,3 +30,22 @@ a.button.back::before {
   font-size: 2rem;
   vertical-align: middle;
 }
+
+.currentPrice {
+  font-weight: @ls-font-weight-bold;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+}
+
+.pagination {
+  ul {
+    display: flex;
+    list-style-type: none;
+
+    li:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
