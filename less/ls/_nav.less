@@ -1,13 +1,35 @@
 nav {
+  overflow: visible;
   z-index: 1000;
-}
-nav ul, nav ol {
-  list-style: none;
-  margin-left: 0;
+
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+  }
+
+  ul {
+    li {
+      span,
+      a,
+      strong {
+        display: block;
+      }
+
+      &:last-child {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &.level_2 {
+      li {
+        margin-left: 1.5rem;
+      }
+    }
+  }
 }
 
 @import "_nav-horizontalNav.less";
-@import "_nav-verticalNav.less";
 @import "_nav-offCanvas.less";
 @import "_nav-foldedNavi.less";
 @import "_nav-media.less";

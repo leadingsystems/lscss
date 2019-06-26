@@ -7,30 +7,20 @@ nav.horizontalNavigation,
   position: relative;
 
   ul {
-    margin: 0;
     display: flex;
 
-    li {
-      position: relative;
-      list-style: none;
-      margin-left: 0;
-
-      span,
-      a,
-      strong {
-        text-decoration: none;
-      }
-
-      &.last {
-        a {
-          padding-right: 0;
-        }
-      }
-    }
-
     &.level_1 {
+      li {
+        position: relative;
+        margin-left: 0;
+      }
+
       > li:not(:last-child) {
         margin-right: 1rem;
+      }
+
+      > li:last-child {
+        margin-bottom: 0;
       }
     }
   }
@@ -52,7 +42,6 @@ nav.horizontalNavigation,
     }
 
     li {
-      padding-top: .5rem;
       margin-right: 0;
       white-space: nowrap;
     }
@@ -96,6 +85,34 @@ nav.horizontalNavigation.useMaxWidthNavi,
     li {
       position: unset;
     }
+
+    &.level_2 {
+      > li {
+        padding: 2rem;
+
+        > a,
+        > span,
+        > strong {
+          font-weight: bold;
+          display: block;
+          border-bottom: .1rem solid @ls-border-color-1;
+        }
+      }
+
+      ul {
+        box-shadow: none;
+        display: block;
+        position: relative;
+        left: auto;
+        padding: 0;
+
+        &.level_4 {
+          li {
+            margin-left: 1.5rem;
+          }
+        }
+      }
+    }
   }
 
   .submenu:hover,
@@ -109,45 +126,4 @@ nav.horizontalNavigation.useMaxWidthNavi,
       right: 0;
     }
   }
-
-  ul.level_2 {
-    > li {
-      padding: 2rem;
-
-      > a,
-      > span,
-      > strong {
-        font-weight: bold;
-        display: block;
-        border-bottom: .1rem solid @ls-border-color-1;
-
-        &.submenu {
-          padding-bottom: 5px;
-        }
-      }
-    }
-
-    ul {
-      box-shadow: none;
-      display: block;
-      position: relative;
-      left: auto;
-      padding: 0;
-    }
-
-    ul.level_3 {
-      li {
-        a.submenu,
-        span.submenu,
-        strong.submenu {
-          padding-bottom: 5px;
-        }
-      }
-
-      ul {
-        margin-left: 2rem;
-      }
-    }
-  }
-
 }
