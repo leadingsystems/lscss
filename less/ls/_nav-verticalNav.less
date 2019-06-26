@@ -4,113 +4,43 @@
  */
 nav.verticalNavigation,
 .verticalNavigation > nav {
-  margin-bottom: 20px;
-}
-
-nav.verticalNavigation ul,
-.verticalNavigation > nav ul {
-  margin-bottom: 0px;
-}
-
-nav.verticalNavigation ul li,
-.verticalNavigation > nav ul li {
-  list-style: none;
-  margin-left: 0px;
-}
-
-nav.verticalNavigation ul li a,
-.verticalNavigation > nav ul li a,
-nav.verticalNavigation ul li span,
-.verticalNavigation > nav ul li span {
-  display: block;
+  overflow: visible;
   position: relative;
-}
 
-nav.verticalNavigation ul li:not(:last-child),
-.verticalNavigation > nav ul li:not(:last-child) {
-}
+  ul {
+    margin: 0;
 
-nav.verticalNavigation ul.level_2 li:first-child ,
-.verticalNavigation > nav ul.level_2 li:first-child {
-}
+    li {
+      margin-left: 0;
 
-nav.verticalNavigation ul li:last-child,
-.verticalNavigation > nav ul li:last-child {
-  margin-bottom: 10px;
-}
+      span,
+      a,
+      strong {
+        display: block;
+      }
 
-nav.verticalNavigation ul.level_2 li,
-.verticalNavigation > nav ul.level_2 li {
-  margin-left: 15px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-}
+      &:last-child {
+        margin-bottom: 1rem;
+      }
+    }
 
-nav.verticalNavigation ul.level_1 > li > a,
-.verticalNavigation > nav ul.level_1 > li > a,
-nav.verticalNavigation ul.level_1 > li > span,
-.verticalNavigation > nav ul.level_1 > li > span {
-  font-weight: normal;
-}
+    &.level_1 {
+      li {
+        span,
+        a,
+        strong {
+          font-weight: normal;
+        }
+      }
+    }
 
-nav.verticalNavigation ul li span,
-.verticalNavigation > nav ul li span,
-nav.verticalNavigation ul li a,
-.verticalNavigation > nav ul li a {
-  text-decoration: none;
-}
-
-nav.verticalNavigation li:hover > span,
-.verticalNavigation > nav li:hover > span,
-nav.verticalNavigation li:hover > a,
-.verticalNavigation > nav li:hover > a,
-nav.verticalNavigation span:hover,
-.verticalNavigation > nav span:hover,
-nav.verticalNavigation a:hover,
-.verticalNavigation > nav a:hover,
-nav.verticalNavigation span.active,
-.verticalNavigation > nav span.active,
-nav.verticalNavigation a.active,
-.verticalNavigation > nav a.active,
-nav.verticalNavigation span.trail,
-.verticalNavigation > nav span.trail,
-nav.verticalNavigation a.trail,
-.verticalNavigation > nav a.trail {
-}
-
-nav.verticalNavigation ul li .ocSubnaviToggler,
-.verticalNavigation > nav ul li .ocSubnaviToggler {
-  display: block;
-  height: 23px;
-  width: 20px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  cursor: pointer;
-  background-size: 10px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: #F4F4F4;
-}
-
-nav.verticalNavigation ul li.lsUnfoldClosed > .ocSubnaviToggler,
-.verticalNavigation > nav ul li.lsUnfoldClosed > .ocSubnaviToggler {
-  background-image: url("../images/misc/arrow_down.png");
-}
-
-nav.verticalNavigation ul li.lsUnfoldOpen > .ocSubnaviToggler,
-.verticalNavigation > nav ul li.lsUnfoldOpen > .ocSubnaviToggler {
-  background-image: url("../images/misc/arrow_up.png");
-}
-
-nav.verticalNavigation ul li.lsUnfoldOpen.lsUnfoldRunning > .ocSubnaviToggler,
-.verticalNavigation > nav ul li.lsUnfoldOpen.lsUnfoldRunning > .ocSubnaviToggler {
-  background-image: url("../images/misc/arrow_down.png");
-}
-
-nav.verticalNavigation ul li.lsUnfoldClosed.lsUnfoldRunning > .ocSubnaviToggler,
-.verticalNavigation > nav ul li.lsUnfoldClosed.lsUnfoldRunning > .ocSubnaviToggler {
-  background-image: url("../images/misc/arrow_up.png");
+    &.level_2 {
+      li {
+        margin-left: 1.5rem;
+        margin-right: 0;
+      }
+    }
+  }
 }
 /*
  * <- vertical navigation
