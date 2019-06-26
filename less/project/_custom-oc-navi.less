@@ -1,10 +1,33 @@
-body.useOcNavi #lsOcNaviToggler {
-  display: none;
-  position: fixed;
-  right: 0;
-  top: 1.1rem;
-  font-size: 2.2rem;
+body.useOcNavi {
+  #lsOcNaviToggler {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 1.1rem;
+    font-size: 2.2rem;
+  }
+
+  #offCanvasContainer {
+    #header-logo {
+      background-color: #FFFF00;
+      height: 3rem;
+      margin-bottom: .2rem;
+      position: relative;
+      margin-top: 3rem;
+
+      .image_container {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    nav > h6 {
+      margin-top: 3rem;
+    }
+  }
 }
+
+
 
 @media screen and (max-width: 1000px) {
   body.useOcNavi #lsOcNaviToggler {
