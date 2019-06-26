@@ -55,7 +55,6 @@ STYLE FILE "styles.css"
       padding-left: .5rem;
       padding-top: .5rem;
       padding-bottom: .5rem;
-      padding-right: 50%;
       display: inline-block;
       z-index: 2;
       position: relative;
@@ -91,7 +90,6 @@ STYLE FILE "styles.css"
     &.trail,
     &.active,
     &:hover {
-      > .foldedNaviToggler,
       > a,
       > span,
       > strong {
@@ -101,15 +99,6 @@ STYLE FILE "styles.css"
 
     &:last-child {
       margin-bottom: 0;
-    }
-  }
-
-  &.lsUnfoldOpen,
-  &.lsUnfoldClosed.lsUnfoldRunning {
-    > li > a {
-      &:first-child {
-        //border-top: .1rem solid @ls-border-color-1;
-      }
     }
   }
 }
