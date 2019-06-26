@@ -20,10 +20,29 @@ nav {
         margin-bottom: 1rem;
       }
     }
+  }
 
-    &.level_2 {
-      li {
-        margin-left: 1.5rem;
+  /*
+   * We use this deep selector because we only want to rely on the actual list structure
+   * and not on any additional classes
+   */
+  > ul {
+    > li {
+       ul {
+         li {
+           margin-left: 1.5rem;
+         }
+       }
+    }
+  }
+}
+
+nav.onlyShowFirstLevel,
+.onlyShowFirstLevel > nav {
+  > ul {
+    > li {
+      > ul {
+        display: none !important; // Since this is never ever meant to be overwritten, !important is okay here
       }
     }
   }

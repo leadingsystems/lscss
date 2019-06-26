@@ -3,19 +3,6 @@ MODULE "foldedNavi"
 STYLE FILE "styles.css"
 */
 
-.useFoldedNavi {
-}
-
-.useFoldedNavi .foldedNaviToggler {
-  position: absolute;
-  right: 0px;
-  border: 0;
-  padding: 2px;
-  cursor: pointer;
-  .fa-icon;
-  .fas;
-}
-
 .useFoldedNavi .foldedNaviToggler.lsUnfoldClosed::after {
   content: @fa-var-angle-right;
 }
@@ -32,10 +19,96 @@ STYLE FILE "styles.css"
   content: @fa-var-angle-right;
 }
 
-.useFoldedNavi ul li {
-  position: relative;
-  padding-top: 5px;
-  padding-bottom: 5px;
+.useFoldedNavi ul {
+  li {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &:not(:first-child) {
+      > a,
+      > span,
+      > strong {
+        border-top: .1rem solid @ls-border-color-1;
+      }
+    }
+
+    &.lsUnfoldOpen,
+    &.lsUnfoldRunning,
+    .lsUnfoldOpen,
+    .lsUnfoldRunning {
+      > a,
+      > span,
+      > strong {
+        border-bottom: .1rem solid @ls-border-color-1;
+      }
+    }
+
+    > a,
+    > span,
+    > strong {
+      padding-left: .5rem;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      display: inline-block;
+      z-index: 2;
+      position: relative;
+
+      &:first-child {
+        display: block;
+      }
+    }
+
+    .foldedNaviToggler {
+      position: absolute;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      text-align: right;
+      border: 0;
+      padding: .5rem;
+      cursor: pointer;
+      .fa-icon;
+      .fas;
+      line-height: inherit;
+    }
+
+    &.lsUnfoldOpen,
+    &.lsUnfoldClosed.lsUnfoldRunning {
+      border-bottom: none;
+    }
+
+    &.trail,
+    &:hover {
+      > .foldedNaviToggler,
+      > a,
+      > span,
+      > strong {
+        background-color: @ls-color-5;
+      }
+    }
+
+    a,
+    span,
+    strong {
+      &.active {
+        background-color: @ls-color-5;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.lsUnfoldOpen,
+  &.lsUnfoldClosed.lsUnfoldRunning {
+    > li > a {
+      &:first-child {
+        //border-top: .1rem solid @ls-border-color-1;
+      }
+    }
+  }
 }
 
 .useFoldedNavi ul.level_1 ul {
@@ -44,5 +117,5 @@ STYLE FILE "styles.css"
 }
 
 .useFoldedNavi ul.level_2 li {
-  margin-left: 15px;
+  margin-left: 1.5rem;
 }
