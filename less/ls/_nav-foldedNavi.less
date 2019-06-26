@@ -44,12 +44,17 @@ STYLE FILE "styles.css"
       }
     }
 
+    a:hover {
+      font-weight: @ls-font-weight-bold;
+    }
+
     > a,
     > span,
     > strong {
       padding-left: .5rem;
       padding-top: .5rem;
       padding-bottom: .5rem;
+      padding-right: 40%;
       display: inline-block;
       z-index: 2;
       position: relative;
@@ -71,6 +76,10 @@ STYLE FILE "styles.css"
       .fa-icon;
       .fas;
       line-height: inherit;
+
+      &:hover {
+        background-image: linear-gradient(to right, rgba(0,0,0,0.0) 80%, rgba(0,0,0,0.1) 100%);
+      }
     }
 
     &.lsUnfoldOpen,
