@@ -46,6 +46,7 @@ STYLE FILE "styles.css"
 
     a:hover {
       font-weight: @ls-font-weight-bold;
+      background-image: linear-gradient(to left, rgba(0,0,0,0.0) 20%, rgba(0,0,0,0.075) 100%);
     }
 
     > a,
@@ -54,7 +55,7 @@ STYLE FILE "styles.css"
       padding-left: .5rem;
       padding-top: .5rem;
       padding-bottom: .5rem;
-      padding-right: 40%;
+      padding-right: 50%;
       display: inline-block;
       z-index: 2;
       position: relative;
@@ -78,7 +79,7 @@ STYLE FILE "styles.css"
       line-height: inherit;
 
       &:hover {
-        background-image: linear-gradient(to right, rgba(0,0,0,0.0) 80%, rgba(0,0,0,0.1) 100%);
+        background-image: linear-gradient(to right, rgba(0,0,0,0.0) 80%, rgba(0,0,0,0.075) 100%);
       }
     }
 
@@ -90,7 +91,10 @@ STYLE FILE "styles.css"
     &.trail,
     &.active,
     &:hover {
-      > .foldedNaviToggler {
+      > .foldedNaviToggler,
+      > a,
+      > span,
+      > strong {
         background-color: @ls-color-5;
       }
     }
