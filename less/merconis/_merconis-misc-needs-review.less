@@ -44,3 +44,36 @@ a.button.back::before {
 .oldPrice {
   text-decoration: line-through;
 }
+
+.product-marker-container {
+  position: absolute;
+  top: -1.5rem;
+  left: .5rem;
+  right: -1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  .product-marker {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    transform: rotate(-33deg);
+
+    &::after {
+      //.fa-icon;
+      //.fas;
+      font-size: 2.5rem;
+      font-weight: @ls-font-weight-bold;
+      color: @ls-color-3;
+      text-shadow: .2rem .2rem .5rem @ls-color-1;
+    }
+
+    &.new::after {
+      content: "NEW";
+    }
+
+    &.sale::after {
+      content: "SALE";
+    }
+  }
+}
