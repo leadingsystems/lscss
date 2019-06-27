@@ -21,6 +21,24 @@
   transform: scale(@horiz, @vert);
 }
 
+.no-button() {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  background: none;
+  font-weight: inherit;
+  line-height: @ls-line-height-base;
+  color: inherit;
+  width: auto;
+  height: auto;
+  min-width: unset;
+  min-height: unset;
+}
+
 
 // Only display content to screen readers. A la Bootstrap 4.
 //
