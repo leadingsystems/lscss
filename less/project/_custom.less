@@ -34,6 +34,17 @@ button:not(.no-button) {
   text-align: center;
 }
 
+a.button.simple,
+button.simple:not(.no-button) {
+  box-shadow: none;
+  padding: 0;
+  background: none;
+  font-weight: @ls-font-weight-normal;
+  line-height: 1;
+  min-width: unset;
+  text-align: left;
+}
+
 a.button::after,
 button::after {
   .fa-icon;
