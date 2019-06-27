@@ -4,6 +4,7 @@
 @import "_custom-footer.less";
 @import "_custom-footer-responsive.less";
 @import "_custom-components-image-teaser.less";
+@import "_custom-responsive.less";
 
 #main {
   min-height: 20rem;
@@ -49,11 +50,7 @@ button:not(.no-button)::after {
 }
 
 button.no-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  background: none;
+  .no-button;
 }
 
 p.error {
@@ -62,10 +59,4 @@ p.error {
 
 p.success {
   color: @ls-color-success;
-}
-
-@media screen and (max-width: 700px) {
-  html {
-    font-size: 9px;
-  }
 }
