@@ -64,3 +64,78 @@ footer .inside {
 .ce_image:last-child {
   margin-bottom: 0;
 }
+
+/* PAGINATION */
+.pagination {
+  position: relative;
+  text-align: center;
+  padding: 0 6rem;
+  line-height: 2rem;
+
+  ul {
+    li {
+      display: none;
+
+      &.first,
+      &.previous,
+      &.next,
+      &.last {
+        display: block;
+        //position: absolute;
+        //top: 0;
+
+        a {
+          display: block;
+          width: 3rem;
+          padding-left: 3rem;
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+
+          &::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            .fa-icon;
+            .fas;
+            line-height: inherit;
+            width: 3rem;
+            font-size: 2rem;
+          }
+
+          &.first::after {
+            content: @fa-var-angle-double-left;
+          }
+
+          &.previous::after {
+            content: @fa-var-angle-left;
+          }
+
+          &.next::after {
+            content: @fa-var-angle-right;
+          }
+
+          &.last::after {
+            content: @fa-var-angle-double-right;
+          }
+
+          &.first {
+            left: 0;
+          }
+
+          &.previous {
+            left: 3rem;
+          }
+
+          &.next {
+            right: 3rem;
+          }
+
+          &.last {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
