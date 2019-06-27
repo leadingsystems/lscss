@@ -81,6 +81,7 @@
   bottom: 4rem;
   right: 10%;
   font-weight: @ls-font-weight-bold;
+  z-index: 10001;
 }
 
 #header-search > .value,
@@ -89,7 +90,7 @@
   text-align: center;
 }
 
-#header-search > .value::before {
+#header-search > .value a::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -110,6 +111,7 @@
   bottom: 4rem;
   right: 0;
   font-weight: @ls-font-weight-bold;
+  z-index: 10001;
 }
 
 #header-cart > .value,
