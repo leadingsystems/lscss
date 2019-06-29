@@ -8,7 +8,9 @@
 }
 
 .dropdownSecondLevelUlTouchedOrHover() {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   width: unset;
   left: unset;
   right: unset;
@@ -16,12 +18,14 @@
 }
 
 .dropdownThirdLevelUlTouchedOrHover() {
-  display: block;
-  top: 0;
-  left: calc(100%);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  top: @ls-nav-dropdown-vertical-offset;
+  left: 100%;
 }
 
-  nav.horizontalNavigation,
+nav.horizontalNavigation,
 .horizontalNavigation > nav {
   > ul {
     display: flex;
@@ -91,6 +95,10 @@
 
 nav.horizontalNavigation.dropdown,
 .horizontalNavigation.dropdown > nav {
+  ul {
+    z-index: 1;
+  }
+
   > ul {
     li {
       position: relative;
@@ -108,12 +116,15 @@ nav.horizontalNavigation.dropdown,
         li {
           padding: 0;
           margin-left: 0;
+          display: inline-block;
 
           > a,
           > span,
           > strong {
             font-weight: @ls-font-weight-normal;
             border-bottom: none;
+            display: inline-block;
+            padding-right: @ls-nav-dropdown-horizontal-distance;
           }
         }
       }
