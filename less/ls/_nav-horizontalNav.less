@@ -37,7 +37,6 @@ nav.horizontalNavigation,
         }
       }
 
-      &:hover,
       &.touched {
         > ul {
           display: flex;
@@ -47,6 +46,31 @@ nav.horizontalNavigation,
           left: 0;
           right: 0;
         }
+      }
+    }
+  }
+
+  &:not(.useTouchNaviOnNonTouchDevices) {
+    > ul {
+      > li {
+        &:hover {
+          > ul {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.useTouchNaviOnNonTouchDevices {
+    li {
+      > strong {
+        cursor: pointer;
       }
     }
   }
@@ -81,7 +105,6 @@ nav.horizontalNavigation.dropdown,
         }
       }
 
-      &:hover,
       &.touched {
         > ul {
           display: block;
@@ -91,12 +114,37 @@ nav.horizontalNavigation.dropdown,
           top: 100%;
 
           li {
-            &:hover,
             &.touched {
               > ul {
                 display: block;
                 top: 0;
                 left: calc(100%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &:not(.useTouchNaviOnNonTouchDevices) {
+    > ul {
+      > li {
+        &:hover {
+          > ul {
+            display: block;
+            width: unset;
+            left: unset;
+            right: unset;
+            top: 100%;
+
+            li {
+              &:hover {
+                > ul {
+                  display: block;
+                  top: 0;
+                  left: calc(100%);
+                }
               }
             }
           }
