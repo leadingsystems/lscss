@@ -1,4 +1,27 @@
-nav.horizontalNavigation,
+.secondLevelUlTouchedOrHover() {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+.dropdownSecondLevelUlTouchedOrHover() {
+  display: block;
+  width: unset;
+  left: unset;
+  right: unset;
+  top: 100%;
+}
+
+.dropdownThirdLevelUlTouchedOrHover() {
+  display: block;
+  top: 0;
+  left: calc(100%);
+}
+
+  nav.horizontalNavigation,
 .horizontalNavigation > nav {
   > ul {
     display: flex;
@@ -39,12 +62,7 @@ nav.horizontalNavigation,
 
       &.touched {
         > ul {
-          display: flex;
-          justify-content: flex-start;
-          flex-wrap: wrap;
-          width: 100%;
-          left: 0;
-          right: 0;
+          .secondLevelUlTouchedOrHover;
         }
       }
     }
@@ -55,12 +73,7 @@ nav.horizontalNavigation,
       > li {
         &:hover {
           > ul {
-            display: flex;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            width: 100%;
-            left: 0;
-            right: 0;
+            .secondLevelUlTouchedOrHover;
           }
         }
       }
@@ -107,18 +120,12 @@ nav.horizontalNavigation.dropdown,
 
       &.touched {
         > ul {
-          display: block;
-          width: unset;
-          left: unset;
-          right: unset;
-          top: 100%;
+          .dropdownSecondLevelUlTouchedOrHover;
 
           li {
             &.touched {
               > ul {
-                display: block;
-                top: 0;
-                left: calc(100%);
+                .dropdownThirdLevelUlTouchedOrHover;
               }
             }
           }
@@ -132,18 +139,12 @@ nav.horizontalNavigation.dropdown,
       > li {
         &:hover {
           > ul {
-            display: block;
-            width: unset;
-            left: unset;
-            right: unset;
-            top: 100%;
+            .dropdownSecondLevelUlTouchedOrHover;
 
             li {
               &:hover {
                 > ul {
-                  display: block;
-                  top: 0;
-                  left: calc(100%);
+                  .dropdownThirdLevelUlTouchedOrHover;
                 }
               }
             }
