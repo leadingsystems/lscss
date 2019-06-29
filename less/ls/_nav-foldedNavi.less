@@ -3,23 +3,8 @@ MODULE "foldedNavi"
 STYLE FILE "styles.css"
 */
 
-.useFoldedNavi .foldedNaviToggler.lsUnfoldClosed::after {
-  content: @fa-var-angle-right;
-}
-
-.useFoldedNavi .foldedNaviToggler.lsUnfoldClosed.lsUnfoldRunning::after {
-  content: @fa-var-angle-down;
-}
-
-.useFoldedNavi .foldedNaviToggler.lsUnfoldOpen::after {
-  content: @fa-var-angle-down;
-}
-
-.useFoldedNavi .foldedNaviToggler.lsUnfoldOpen.lsUnfoldRunning::after {
-  content: @fa-var-angle-right;
-}
-
-.useFoldedNavi ul {
+.useFoldedNavi ul,
+ul.useFoldedNavi {
   li {
     position: relative;
     padding-top: 0;
@@ -77,6 +62,22 @@ STYLE FILE "styles.css"
       .fas;
       line-height: inherit;
 
+      &.lsUnfoldClosed::after {
+        content: @fa-var-angle-right;
+
+        &.lsUnfoldRunning::after {
+          content: @fa-var-angle-down;
+        }
+      }
+
+      &.lsUnfoldOpen::after {
+        content: @fa-var-angle-down;
+
+        &.lsUnfoldRunning::after {
+          content: @fa-var-angle-right;
+        }
+      }
+
       &:hover {
         background-image: linear-gradient(to right, rgba(0,0,0,0.0) 80%, rgba(0,0,0,0.075) 100%);
       }
@@ -103,11 +104,13 @@ STYLE FILE "styles.css"
   }
 }
 
-.useFoldedNavi ul.level_1 ul {
+.useFoldedNavi > ul ul,
+ul.useFoldedNavi ul {
   display: none;
   overflow: hidden;
 }
 
-.useFoldedNavi ul.level_2 li {
+.useFoldedNavi > ul > ul li,
+ul.useFoldedNavi > ul li {
   margin-left: 1.5rem;
 }
