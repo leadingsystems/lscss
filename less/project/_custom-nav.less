@@ -1,0 +1,21 @@
+nav.nav-categories {
+  > ul {
+    > li {
+      padding-left: .2rem;
+      padding-right: .2rem;
+
+      &:not(:last-child) {
+        margin-right: .6rem;
+      }
+
+      &.touched {
+        background-color: @ls-color-1;
+
+        > a,
+        > strong {
+          color: @ls-color-6;
+        }
+      }
+    }
+  }
+}
