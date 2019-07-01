@@ -128,3 +128,15 @@ small {
 figure, form {
   display: inherit;
 }
+
+body:not(.user-is-tabbing) {
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    &:focus {
+      outline: none;
+    }
+  }
+}
