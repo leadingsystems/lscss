@@ -36,6 +36,43 @@
   font-weight: @ls-font-weight-bold;
 }
 
+#header-sprachen {
+  bottom: 7rem;
+  left: 25%;
+  font-weight: @ls-font-weight-bold;
+
+  > a {
+    > span {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 2rem;
+      height: 1.2rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &.info-english {
+      &::after {
+        background-image: url("/files/images/content/flags/great-britain.png");
+      }
+    }
+
+    &.info-espagnol {
+      &::after {
+        background-image: url("/files/images/content/flags/spain.png");
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
 #header-email::before {
   display: inline-block;
   font-style: normal;

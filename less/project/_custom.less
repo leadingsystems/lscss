@@ -6,6 +6,7 @@
 @import "_custom-footer-responsive.less";
 @import "_custom-components-image-teaser.less";
 @import "_custom-responsive.less";
+@import "_custom-mixins.less";
 
 #main {
   min-height: 20rem;
@@ -79,4 +80,73 @@ p.success {
   button {
     margin-left: 2rem;
   }
+}
+
+.simple-item-list {
+  > div {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+
+    > * {
+      margin: 0;
+    }
+
+    > *:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}
+
+.foreign-language-information,
+.second-hand-category-information {
+  img {
+    max-width: 15vw;
+    height: auto;
+  }
+
+  .deutsch,
+  .english,
+  .espagnol {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.shopProduct {
+  .second-hand-info {
+    a {
+      font-size: @ls-font-size-small;
+      text-decoration: underline;
+    }
+  }
+}
+
+.hint-language {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 1.2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 1rem;
+  }
+
+  &.hint-english {
+    &::before {
+      background-image: url("/files/images/content/flags/great-britain.png");
+    }
+  }
+
+  &.hint-espagnol {
+    &::before {
+      background-image: url("/files/images/content/flags/spain.png");
+    }
+  }
+}
+
+.back-button-standard-container {
+  margin-bottom: 2rem;
 }

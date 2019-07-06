@@ -1,3 +1,63 @@
+#header-wrapper {
+  nav.nav-misc {
+    li.member-account,
+    li.personal-area {
+      > a {
+        > span {
+          display: none;
+        }
+
+        &::before {
+          .fa-icon;
+          .fas;
+        }
+      }
+
+      > strong {
+        display: none;
+      }
+
+      &.forward,
+      &.active {
+        &::before {
+          .fa-icon;
+          .fas;
+        }
+      }
+    }
+
+    li.personal-area {
+      > a {
+        &::before {
+          content: @fa-var-user-cog;
+        }
+      }
+
+      &.forward,
+      &.active {
+        &::before {
+          content: @fa-var-user-cog;
+        }
+      }
+    }
+
+    li.member-account {
+      > a {
+        &::before {
+          content: @fa-var-user-alt;
+        }
+      }
+
+      &.forward,
+      &.active {
+        &::before {
+          content: @fa-var-user-alt;
+        }
+      }
+    }
+  }
+}
+
 nav.nav-categories {
   > ul {
     > li {

@@ -2,9 +2,18 @@ body.useOcNavi {
   #lsOcNaviToggler {
     display: none;
     position: fixed;
-    right: 0;
-    top: 1.1rem;
-    font-size: 2.2rem;
+    right: .7rem;
+    top: 2.7rem;
+    font-size: 3rem;
+  }
+
+  #lsOcNaviToggler::before {
+    content: "Menü";
+    position: absolute;
+    top: -1.4rem;
+    left: 0;
+    font-size: 1.2rem;
+    font-family: @ls-font-family-base;
   }
 
   #offCanvasContainer {
