@@ -14,6 +14,21 @@
   }
 }
 
+.ls-content-wrapper-narrow {
+  max-width: @ls-small-content-wrapper-max-width;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+@ls-content-wrapper-breakpoint-narrow: @ls-small-content-wrapper-max-width + (2 * (@ls-content-wrapper-padding * @ls-html-font-size-base));
+
+@media (max-width: @ls-content-wrapper-breakpoint-narrow) {
+  .ls-content-wrapper-narrow {
+    margin-left: @ls-content-wrapper-padding;
+    margin-right: @ls-content-wrapper-padding;
+  }
+}
+
 /* CONTAINER */
 .ls-container {
   width: auto;

@@ -10,8 +10,19 @@ footer .inside {
   .ls-content-wrapper;
 }
 
+.mod_article.ls-narrow {
+  .ls-content-wrapper-narrow;
+}
+
 @media (max-width: @ls-content-wrapper-breakpoint) {
-  .mod_article:not(.ls-fullwidth), footer .inside, header .inside {
+  .mod_article:not(.ls-fullwidth):not(.ls-narrow), footer .inside, header .inside {
+    margin-left: @ls-content-wrapper-padding;
+    margin-right: @ls-content-wrapper-padding;
+  }
+}
+
+@media (max-width: @ls-content-wrapper-breakpoint-narrow) {
+  .mod_article.ls-narrow {
     margin-left: @ls-content-wrapper-padding;
     margin-right: @ls-content-wrapper-padding;
   }
@@ -151,5 +162,19 @@ form .widget {
   p.error {
     position: absolute;
     top: 2rem;
+  }
+}
+
+.tl_confirm {
+  border: @border-width solid @ls-border-color-1;
+  padding: .5rem 2rem;
+  position: relative;
+  background-color: @ls-color-7;
+
+  &::before {
+    .fa-icon;
+    .fas;
+    content: @fa-var-check;
+    margin-right: 1rem;
   }
 }
