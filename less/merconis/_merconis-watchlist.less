@@ -1,0 +1,37 @@
+.favoriteSwitchBox {
+  form {
+    margin: 0;
+    padding: 0;
+  }
+
+  button {
+    &::before {
+      .fa-icon;
+      .fas;
+      content: @fa-var-heart;
+      color: @ls-color-8;
+    }
+
+    .button-content {
+      display: none;
+    }
+  }
+
+  &.is-favorite {
+    button {
+      &::before {
+        color: @ls-color-1;
+      }
+    }
+  }
+}
+
+.productList {
+  .favoriteSwitchBox {
+    button {
+      position: absolute;
+      left: 1rem;
+      bottom: 1rem;
+    }
+  }
+}
