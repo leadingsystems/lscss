@@ -1,0 +1,65 @@
+.template_myOrders_default {
+  .sortingForm {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+
+      > label {
+        width: 100%;
+        font-weight: @ls-font-weight-bold;
+      }
+    }
+
+    .submitBox {
+      align-items: flex-end;
+
+      button {
+        min-width: 6rem;
+      }
+    }
+  }
+
+  .myOrder {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    .label {
+      font-weight: @ls-font-weight-bold;
+    }
+  }
+}
+
+@media screen and (max-width: 700px){
+  .template_myOrders_default {
+    .myOrder {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+
+      > div {
+        width: 50%;
+        margin-bottom: 1rem;
+
+        &.orderDetails {
+          width: 100%;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .sortingForm {
+    .submitBox {
+      width: 100%;
+    }
+  }
+}
