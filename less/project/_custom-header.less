@@ -20,14 +20,52 @@
   display: none;
 }
 
+#header-wrapper {
+  position: relative;
+}
+
+#header-wrapper::before {
+  content: "";
+  width: 35rem;
+  height: 3rem;
+  background-image: url("/files/images/layout/header-train-left.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -12rem;
+  top: -3rem;
+}
+
+#header-wrapper::after {
+  content: "";
+  width: 35rem;
+  height: 3rem;
+  background-image: url("/files/images/layout/header-train-right.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: -12rem;
+  top: -3rem;
+}
+
 #header-wrapper > * {
   position: absolute;
 }
 
 #header-logo {
-  bottom: 0;
-  left: 0;
+  bottom: 1.2rem;
+  left: 6.6rem;
   z-index: 10001;
+  width: 18rem;
+
+  .image_container {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 #header-email {
