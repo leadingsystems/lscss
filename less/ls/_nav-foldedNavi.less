@@ -12,7 +12,6 @@ ul.useFoldedNavi {
 
     &:not(:first-child) {
       > a,
-      > span,
       > strong {
         border-top: .1rem solid @ls-border-color-1;
       }
@@ -23,7 +22,6 @@ ul.useFoldedNavi {
     .lsUnfoldOpen,
     .lsUnfoldRunning {
       > a,
-      > span,
       > strong {
         border-bottom: .1rem solid @ls-border-color-1;
       }
@@ -31,17 +29,13 @@ ul.useFoldedNavi {
 
     a:hover {
       font-weight: @ls-font-weight-bold;
-      background-image: linear-gradient(to left, rgba(0,0,0,0.0) 20%, rgba(0,0,0,0.075) 100%);
     }
 
     > a,
-    > span,
     > strong {
-      padding-left: .5rem;
+      padding-left: 3rem;
       padding-top: .5rem;
       padding-bottom: .5rem;
-      display: inline-block;
-      z-index: 2;
       position: relative;
 
       &:first-child {
@@ -54,7 +48,7 @@ ul.useFoldedNavi {
       right: 0;
       left: 0;
       z-index: 1;
-      text-align: right;
+      text-align: left;
       border: 0;
       padding: .5rem;
       cursor: pointer;
@@ -63,23 +57,21 @@ ul.useFoldedNavi {
       line-height: inherit;
 
       &.lsUnfoldClosed::after {
-        content: @fa-var-angle-right;
+        content: @fa-var-plus;
+        font-size: 1rem;
 
         &.lsUnfoldRunning::after {
-          content: @fa-var-angle-down;
+          content: @fa-var-minus;
         }
       }
 
       &.lsUnfoldOpen::after {
-        content: @fa-var-angle-down;
+        content: @fa-var-minus;
+        font-size: 1rem;
 
         &.lsUnfoldRunning::after {
-          content: @fa-var-angle-right;
+          content: @fa-var-plus;
         }
-      }
-
-      &:hover {
-        background-image: linear-gradient(to right, rgba(0,0,0,0.0) 80%, rgba(0,0,0,0.075) 100%);
       }
     }
 
@@ -92,9 +84,8 @@ ul.useFoldedNavi {
     &.active,
     &:hover {
       > a,
-      > span,
       > strong {
-        background-color: @ls-color-5;
+        font-weight: @ls-font-weight-bold;
       }
     }
 
