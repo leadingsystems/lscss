@@ -3,6 +3,7 @@
 
   .product-list-navigation {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 1rem;
     border-bottom: .1rem solid @ls-border-color-1;
@@ -141,6 +142,13 @@
         width: 100%;
         margin-left: 0;
         margin-right: 0;
+      }
+    }
+
+    .product-list-navigation {
+      > * {
+        width: 100%;
+        text-align: center;
       }
     }
   }
