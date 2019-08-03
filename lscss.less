@@ -1,0 +1,26 @@
+/*
+ * Add the fontawesome styles first because it defines variables that we need to override
+ */
+@import "less/fontawesome/_fontawesome.less";
+@import "less/fontawesome/_solid.less";
+
+/*
+ * Reset the browsers' default styles
+ */
+@import "less/ls/_reset.less";
+
+/*
+ * Define the lscss variables. Of course they can be overridden in the project's custom less files
+ */
+@import "less/ls/_variables-default.less";
+
+
+
+@import "less/ls/_basics.less";
+@import "less/ls/_grid.less";
+
+@import "less/ls/_contao-basics.less";
+@import "less/ls/_contao-groupedForms.less";
+@import "less/ls/_nav.less";
+@import "less/ls/_components.less";
+@import "less/ls/_utilities.less";
