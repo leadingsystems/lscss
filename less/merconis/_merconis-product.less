@@ -1,0 +1,36 @@
+.availability {
+  .av1,
+  .av2,
+  .av3,
+  .av4 {
+    background-color: @ls-color-availability-lights;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+  }
+
+  &.high {
+    .av1,
+    .av2,
+    .av3,
+    .av4 {
+      background-color: @ls-color-availability-lights-high;
+    }
+  }
+
+  &.low {
+    .av1,
+    .av2 {
+      background-color: @ls-color-availability-lights-high;
+    }
+  }
+
+  &.unavailable {
+    .av1,
+    .av2,
+    .av3,
+    .av4 {
+      background-color: @ls-color-availability-lights-low;
+    }
+  }
+}
