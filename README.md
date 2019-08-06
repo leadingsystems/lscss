@@ -35,3 +35,13 @@ you can also define new variables.
 `_fonts.less` contains the @font-face rules for loading fonts
 
 `_custom.less` contains all the project specific styles, probably divided in multiple imports.
+
+#### Using LSCSS and LSJS together
+If you use the LSJS framework, you have to include the LSJS stylesheets like this:
+```
+[...]
+@import "../../assets/lsjs/core/modules/loadingIndicator/styles/_lsjs-loadingIndicator.less";
+@import "../../assets/lsjs/core/modules/ocNavi/styles/_lsjs-ocNavi";
+[...]
+```
+
