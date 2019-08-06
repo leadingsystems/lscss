@@ -1,7 +1,9 @@
 # Leading Systems LSCSS
 
 ## Getting started
-After installing LSCSS, the less framework is located in assets/lscss. The files in this directory may not be modified.
+After installing LSCSS, the less framework is located in assets/lscss.
+
+**Please note:** The files in this directory may not be modified.
 
 Instead, you create your own custom less file, include the LSCSS framework and do all your work here.
 
@@ -45,3 +47,9 @@ If you use the LSJS framework, you have to include the LSJS stylesheets like thi
 [...]
 ```
 
+#### Using LSCSS and Merconis together
+If you use Merconis, you have to include the Merconis stylesheets like this:
+
+```
+@import "../../vendor/leadingsystems/contao-merconis/src/Resources/contao/lscss/_merconis.less";
+```
