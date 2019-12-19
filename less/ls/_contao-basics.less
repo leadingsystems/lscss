@@ -1,3 +1,61 @@
+/**
+ * Float classes (see #6851)
+ */
+.float_left {
+  float: left;
+}
+.float_right {
+  float: right;
+}
+
+/**
+ * Clear floats
+ */
+.clear,#clear {
+  height: .01rem;
+  font-size: .01px;
+  line-height: .01px;
+  clear: both;
+}
+
+.image_container {
+  &.float_left {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &.float_right {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/**
+ * Hide invisible elements
+ */
+.invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1rem;
+  margin: -.1rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: .1rem;
+}
+
+/**
+ * Custom layout sections
+ */
+.custom {
+  display: block;
+}
+#container:after,.custom:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* PAGINATION */
 .pagination {
   position: relative;
