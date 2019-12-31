@@ -1,0 +1,146 @@
+html {
+  font-size: $ls-html-font-size-base;
+  font-family: $ls-font-family-base;
+}
+
+body {
+  line-height: $ls-line-height-base;
+  font-size: $ls-font-size-base;
+  width: 100%;
+  overflow-x: hidden;
+  color: $ls-color-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $ls-headings-font-family;
+  font-weight: $ls-headings-font-weight;
+  line-height: $ls-headings-line-height;
+  margin-bottom: $ls-headings-margin-bottom;
+  color: $ls-headings-color;
+  margin-top: $ls-headings-margin-top;
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0;
+}
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+  margin-bottom: 0;
+}
+h1 {
+  font-size: $ls-h1-font-size;
+  margin-bottom: $ls-h1-margin-bottom;
+  font-weight: $ls-h1-font-weight;
+  color: $ls-h1-font-color;
+}
+h2 {
+  font-size: $ls-h2-font-size;
+  margin-bottom: $ls-h2-margin-bottom;
+  font-weight: $ls-h2-font-weight;
+  color: $ls-h2-font-color;
+}
+h3 {
+  font-size: $ls-h3-font-size;
+  margin-bottom: $ls-h3-margin-bottom;
+  font-weight: $ls-h3-font-weight;
+  color: $ls-h3-font-color;
+}
+h4 {
+  font-size: $ls-h4-font-size;
+  margin-bottom: $ls-h4-margin-bottom;
+  font-weight: $ls-h4-font-weight;
+  color: $ls-h4-font-color;
+}
+h5 {
+  font-size: $ls-h5-font-size;
+  margin-bottom: $ls-h5-margin-bottom;
+  font-weight: $ls-h5-font-weight;
+  color: $ls-h5-font-color;
+}
+h6 {
+  font-size: $ls-h6-font-size;
+  margin-bottom: $ls-h6-margin-bottom;
+  font-weight: $ls-h6-font-weight;
+  color: $ls-h6-font-color;
+}
+
+form .widget {
+  margin-top: $ls-paragraph-margin-top;
+  margin-bottom: $ls-paragraph-margin-bottom;
+}
+
+form .widget:first-child {
+  margin-top: 0;
+}
+
+form .widget:last-child {
+  margin-bottom: 0;
+}
+
+p, ol, ul {
+  margin-bottom: $ls-paragraph-margin-bottom;
+  margin-top: $ls-paragraph-margin-top;
+}
+p:first-child, ol:first-child, ul:first-child {
+  margin-top: 0;
+}
+p:last-child, ol:last-child, ul:last-child {
+  margin-bottom: 0;
+}
+
+ol, ul {
+  list-style: $ls-list-style;
+  margin-left: $ls-list-style-margin-left;
+}
+
+pre, code, kbd, samp {
+  font-family: $ls-font-family-monospace;
+}
+
+
+
+
+
+/**/
+a {
+  color: $ls-link-color;
+  text-decoration: $ls-link-text-decoration;
+}
+a:hover {
+  color: $ls-link-color-hover;
+}
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+p > a {
+  text-decoration: $ls-link-inside-paragraph-text-decoration;
+}
+
+b, strong {
+  font-weight: bold;
+}
+small {
+  font-size: 80%;
+}
+
+// Navigation überspringen Screenreader
+.invisible {
+  display: none;
+}
+
+
+figure, form {
+  display: inherit;
+}
+
+body:not(.user-is-tabbing) {
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    &:focus {
+      outline: none;
+    }
+  }
+}

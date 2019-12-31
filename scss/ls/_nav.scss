@@ -1,0 +1,58 @@
+nav {
+  overflow: visible;
+  z-index: 1000;
+  position: relative;
+
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+  }
+
+  ul {
+    li {
+      span,
+      a,
+      strong {
+        display: block;
+
+        &.trail {
+          font-weight: $ls-font-weight-bold;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  /*
+   * We use this deep selector because we only want to rely on the actual list structure
+   * and not on any additional classes
+   */
+  > ul {
+    > li {
+      ul {
+        li {
+          margin-left: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+nav.onlyShowFirstLevel,
+.onlyShowFirstLevel > nav {
+  > ul {
+    > li {
+      > ul {
+        display: none !important; // Since this is never ever meant to be overwritten, !important is okay here
+      }
+    }
+  }
+}
+
+@import "_nav-variables.scss";
+@import "_nav-horizontalNav.scss";
+@import "_nav-foldedNavi.scss";

@@ -1,0 +1,176 @@
+@mixin secondLevelUlTouchedOrHover(){
+  width: 100%;
+  left: 0;
+  right: 0;
+
+  &:not(.useFoldedNavi) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &.useFoldedNavi {
+    display: block;
+  }
+}
+
+@mixin dropdownSecondLevelUlTouchedOrHover(){
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: unset;
+  left: unset;
+  right: unset;
+  top: 100%;
+}
+
+@mixin dropdownThirdLevelUlTouchedOrHover(){
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  top: $ls-nav-dropdown-vertical-offset;
+  left: 100%;
+}
+
+nav.horizontalNavigation,
+.horizontalNavigation > nav {
+  > ul {
+    display: flex;
+
+    > li {
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      > ul {
+        position: absolute;
+        display: none;
+        background-color: $ls-color-6;
+        box-shadow: $ls-shadow-l;
+        padding: 2rem;
+
+        &:not(.useFoldedNavi) {
+          > li {
+            padding: 2rem;
+            margin-left: 0;
+
+            > a,
+            > span,
+            > strong {
+              font-weight: $ls-font-weight-bold;
+              display: block;
+              border-bottom: .1rem solid $ls-border-color-1;
+            }
+
+            > ul {
+              > li {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+
+      &.touched {
+        > ul {
+          @include secondLevelUlTouchedOrHover;
+        }
+      }
+    }
+  }
+
+  &:not(.useTouchNaviOnNonTouchDevices) {
+    > ul {
+      > li {
+        &:hover {
+          > ul {
+            @include secondLevelUlTouchedOrHover;
+          }
+        }
+      }
+    }
+  }
+
+  &.useTouchNaviOnNonTouchDevices {
+    li.submenu {
+      > strong {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+nav.horizontalNavigation.dropdown,
+.horizontalNavigation.dropdown > nav {
+  ul {
+    z-index: 1;
+  }
+
+  > ul {
+    li {
+      position: relative;
+      white-space: nowrap;
+    }
+
+    > li {
+      ul {
+        position: absolute;
+        display: none;
+        background-color: $ls-color-6;
+        box-shadow: $ls-shadow-l;
+        padding: 2rem;
+
+        li {
+          padding: 0;
+          margin-left: 0;
+          display: inline-block;
+
+          > a,
+          > span,
+          > strong {
+            font-weight: $ls-font-weight-normal;
+            border-bottom: none;
+            display: inline-block;
+            padding-right: $ls-nav-dropdown-horizontal-distance;
+          }
+        }
+      }
+
+      &.touched {
+        > ul {
+          @include dropdownSecondLevelUlTouchedOrHover;
+
+          li {
+            &.touched {
+              > ul {
+                @include dropdownThirdLevelUlTouchedOrHover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &:not(.useTouchNaviOnNonTouchDevices) {
+    > ul {
+      > li {
+        &:hover {
+          > ul {
+            @include dropdownSecondLevelUlTouchedOrHover;
+
+            li {
+              &:hover {
+                > ul {
+                  @include dropdownThirdLevelUlTouchedOrHover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

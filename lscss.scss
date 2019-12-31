@@ -1,0 +1,23 @@
+/*
+ * Add the fontawesome styles first because it defines variables that we need to override
+ */
+@import "scss/fontawesome/fontawesome.scss";
+@import "scss/fontawesome/solid.scss";
+
+/*
+ * Reset the browsers' default styles
+ */
+@import "scss/ls/_reset.scss";
+
+/*
+ * Define the lscss variables. Of course they can be overridden in the project's custom scss files
+ */
+@import "scss/ls/_variables-default.scss";
+@import "scss/ls/_general-mixins.scss";
+
+@import "scss/ls/_basics.scss";
+@import "scss/ls/_container.scss";
+@import "scss/ls/_contao-basics.scss";
+@import "scss/ls/_nav.scss";
+@import "scss/ls/_no-js-info.scss";
+

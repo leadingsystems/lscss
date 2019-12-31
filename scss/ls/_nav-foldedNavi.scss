@@ -1,0 +1,104 @@
+.useFoldedNavi ul,
+ul.useFoldedNavi {
+  li {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &:not(:first-child) {
+      > a,
+      > strong {
+        border-top: .1rem solid $ls-border-color-1;
+      }
+    }
+
+    &.lsUnfoldOpen,
+    &.lsUnfoldRunning,
+    .lsUnfoldOpen,
+    .lsUnfoldRunning {
+      > a,
+      > strong {
+        border-bottom: .1rem solid $ls-border-color-1;
+      }
+    }
+
+    a:hover {
+      font-weight: $ls-font-weight-bold;
+    }
+
+    > a,
+    > strong {
+      padding-left: 3rem;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      position: relative;
+
+      &:first-child {
+        display: block;
+      }
+    }
+
+    .foldedNaviToggler {
+      position: absolute;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      text-align: left;
+      border: 0;
+      padding: .5rem;
+      cursor: pointer;
+      @include fa-icon;
+      @include fas;
+      line-height: inherit;
+
+      &.lsUnfoldClosed::after {
+        content: $fa-var-plus;
+        font-size: 1rem;
+
+        &.lsUnfoldRunning::after {
+          content: $fa-var-minus;
+        }
+      }
+
+      &.lsUnfoldOpen::after {
+        content: $fa-var-minus;
+        font-size: 1rem;
+
+        &.lsUnfoldRunning::after {
+          content: $fa-var-plus;
+        }
+      }
+    }
+
+    &.lsUnfoldOpen,
+    &.lsUnfoldClosed.lsUnfoldRunning {
+      border-bottom: none;
+    }
+
+    &.trail,
+    &.active,
+    &:hover {
+      > a,
+      > strong {
+        font-weight: $ls-font-weight-bold;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.useFoldedNavi > ul ul,
+.useFoldedNavi nav > ul ul,
+ul.useFoldedNavi ul {
+  display: none;
+  overflow: hidden;
+}
+
+.useFoldedNavi > ul > ul li,
+.useFoldedNavi nav > ul > ul li,
+ul.useFoldedNavi > ul li {
+  margin-left: 1.5rem;
+}
