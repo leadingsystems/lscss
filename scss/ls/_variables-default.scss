@@ -6,11 +6,11 @@
 /* GRUNDEINSTELLUNGEN */
 
 /* SETUP */
-$ls-html-font-size-base: 10px; // = 1 rem
-$ls-font-size-base: 1.6rem; // Orientiert sich an $ls-html-font-size-base
-$ls-font-weight-normal: 400;
-$ls-font-weight-medium: 500;
-$ls-font-weight-bold: 700;
+$ls-html-font-size-base: 10px !default; // = 1 rem
+$ls-font-size-base: 1.6rem !default; // Orientiert sich an $ls-html-font-size-base
+$ls-font-weight-normal: 400 !default;
+$ls-font-weight-medium: 500 !default;
+$ls-font-weight-bold: 700 !default;
 $fa-font-path: "../../../../../../assets/lscss/scss/fontawesome/webfonts";
 
 
@@ -21,28 +21,27 @@ $fa-font-path: "../../../../../../assets/lscss/scss/fontawesome/webfonts";
 /* IMAGES */
 
 /* FARBEN */
-$ls-color-white: #FFFFFF;
-$ls-color-black: #000000;
-$ls-color-1: #203B8C;
-$ls-color-2: #26488C;
-$ls-color-3: #5A86BF;
-$ls-color-4: #D99873;
-$ls-color-5: #A6634B;
-$ls-color-6: #FFFFFF;
+$ls-color-white: #FFFFFF !default;
+$ls-color-black: #000000 !default;
+$ls-color-1: #203B8C !default;
+$ls-color-2: #26488C !default;
+$ls-color-3: #5A86BF !default;
+$ls-color-4: #D99873 !default;
+$ls-color-5: #A6634B !default;
+$ls-color-6: #FFFFFF !default;
 
-$ls-shadow-s: 2px 1px 6px #dddddd;
-$ls-shadow-l: 2px 1px 10px #dddddd;
+$ls-shadow-s: 2px 1px 6px #dddddd !default;
+$ls-shadow-l: 2px 1px 10px #dddddd !default;
 
-$ls-border-color-1: #dddddd;
-$ls-border-radius-s: 0.2rem;
+$ls-border-color-1: #dddddd !default;
+$ls-border-radius-s: 0.2rem !default;
 
 /* Diverses */
 
-$ls-reduced-header-max-width: 950px;
+$ls-reduced-header-max-width: 950px !default;
 
-$ls-oc-navi-max-width: $ls-reduced-header-max-width;
+$ls-oc-navi-max-width: $ls-reduced-header-max-width !default;
 
-$ls-header-height: 10rem;
-$ls-header-height-reduced: 5rem;
-$ls-header-transition-duration: .5s;
-
+$ls-header-height: 10rem !default;
+$ls-header-height-reduced: 5rem !default;
+$ls-header-transition-duration: .5s !default;

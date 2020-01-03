@@ -1,4 +1,12 @@
 /*
+ * Define the lscss variables. Of course they can be overridden in the project's custom scss files.
+ *
+ * Please note: It is important to import the lscss default variables before importing bootstrap and fontawesome because
+ * this way we can override the default variables defined in bootstrap and fontawesome.
+ */
+@import "scss/ls/_variables-default.scss";
+
+/*
  * Add the fontawesome styles first because it defines variables that we need to override
  */
 @import "scss/fontawesome/fontawesome.scss";
@@ -9,10 +17,6 @@
  */
 @import "scss/bootstrap/4.4.1/scss/bootstrap.scss";
 
-/*
- * Define the lscss variables. Of course they can be overridden in the project's custom scss files
- */
-@import "scss/ls/_variables-default.scss";
 @import "scss/ls/_general-mixins.scss";
 
 @import "scss/ls/_basics.scss";
