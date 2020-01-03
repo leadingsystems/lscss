@@ -5,9 +5,9 @@
 @import "scss/fontawesome/solid.scss";
 
 /*
- * Reset the browsers' default styles
+ * Add bootstrap
  */
-@import "scss/ls/_reset.scss";
+@import "scss/bootstrap/4.4.1/scss/bootstrap.scss";
 
 /*
  * Define the lscss variables. Of course they can be overridden in the project's custom scss files
