@@ -94,27 +94,27 @@
             position: absolute;
             left: 0;
             top: 0;
-            @include fa-icon;
-            @include fas;
+            @extend %fa-icon;
+            @extend .fas;
             line-height: inherit;
             width: 3rem;
             font-size: 2rem;
           }
 
           &.first::after {
-            content: $fa-var-angle-double-left;
+            content: fa-content($fa-var-angle-double-left);
           }
 
           &.previous::after {
-            content: $fa-var-angle-left;
+            content: fa-content($fa-var-angle-left);
           }
 
           &.next::after {
-            content: $fa-var-angle-right;
+            content: fa-content($fa-var-angle-right);
           }
 
           &.last::after {
-            content: $fa-var-angle-double-right;
+            content: fa-content($fa-var-angle-double-right);
           }
 
           &.first {

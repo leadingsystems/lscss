@@ -47,25 +47,25 @@ ul.useFoldedNavi {
       border: 0;
       padding: .5rem;
       cursor: pointer;
-      @include fa-icon;
-      @include fas;
+      @extend %fa-icon;
+      @extend .fas;
       line-height: inherit;
 
       &.lsUnfoldClosed::after {
-        content: $fa-var-plus;
+        content: fa-content($fa-var-plus);
         font-size: 1rem;
 
         &.lsUnfoldRunning::after {
-          content: $fa-var-minus;
+          content: fa-content($fa-var-minus);
         }
       }
 
       &.lsUnfoldOpen::after {
-        content: $fa-var-minus;
+        content: fa-content($fa-var-minus);
         font-size: 1rem;
 
         &.lsUnfoldRunning::after {
-          content: $fa-var-plus;
+          content: fa-content($fa-var-plus);
         }
       }
     }
