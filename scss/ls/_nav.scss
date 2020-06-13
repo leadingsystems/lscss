@@ -1,4 +1,4 @@
-nav {
+nav.lscss-standard-navigation {
   overflow: visible;
   z-index: 1000;
   position: relative;
@@ -55,4 +55,4 @@ nav.onlyShowFirstLevel,
 
 @import "_nav-variables.scss";
 @import "_nav-horizontalNav.scss";
-@import "_nav-foldedNavi.scss";
+//@import "_nav-foldedNavi.scss";

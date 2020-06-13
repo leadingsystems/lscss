@@ -11,7 +11,8 @@ $ls-font-size-base: 1.6rem !default; // Orientiert sich an $ls-html-font-size-ba
 $ls-font-weight-normal: 400 !default;
 $ls-font-weight-medium: 500 !default;
 $ls-font-weight-bold: 700 !default;
-$fa-font-path: "../../../../../../assets/lscss/scss/fontawesome/webfonts";
+$fa-font-path: "../../../../../../assets/lscss/scss/fontawesome/webfonts" !default;
+$fa-font-display: auto !default;
 
 
 /* HEADLINES */
@@ -42,6 +43,4 @@ $ls-reduced-header-max-width: 950px !default;
 
 $ls-oc-navi-max-width: $ls-reduced-header-max-width !default;
 
-$ls-header-height: 10rem !default;
-$ls-header-height-reduced: 5rem !default;
 $ls-header-transition-duration: .5s !default;
