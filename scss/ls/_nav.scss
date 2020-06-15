@@ -1,3 +1,35 @@
+@mixin navFoldTouched() {
+  &:not(.touched):not(.trail):not(.active) {
+    ul {
+      display: none;
+    }
+  }
+}
+
+@mixin navFoldIcons() {
+  &:not(.trail):not(.active) {
+    a.submenu {
+      padding-right: 1rem;
+      position: relative;
+
+      &::after {
+        @extend .fa;
+        content: fa-content($fa-var-plus);
+        position: absolute;
+        right: .2rem;
+        top: .7rem;
+        font-size: 50%;
+      }
+    }
+
+    &.touched {
+      > a.submenu::after {
+        content: fa-content($fa-var-minus);
+      }
+    }
+  }
+}
+
 nav.lscss-standard-navigation {
   overflow: visible;
   z-index: 1000;
@@ -16,7 +48,8 @@ nav.lscss-standard-navigation {
       strong {
         display: block;
 
-        &.trail {
+        &.trail,
+        &.active {
           font-weight: $ls-font-weight-bold;
         }
       }
@@ -37,6 +70,48 @@ nav.lscss-standard-navigation {
         li {
           margin-left: 1.5rem;
         }
+      }
+    }
+  }
+
+  /*
+    <- Plus/minus icons
+   */
+
+  &.useTouchNavi {
+    &.nav-fold,
+    &.nav-fold-from-1 {
+      ul li {
+        @include navFoldTouched;
+        @include navFoldIcons;
+      }
+    }
+
+    &.nav-fold-from-2 {
+      > ul > li ul li {
+        @include navFoldTouched;
+        @include navFoldIcons;
+      }
+    }
+
+    &.nav-fold-from-3 {
+      > ul > li > ul > li ul li {
+        @include navFoldTouched;
+        @include navFoldIcons;
+      }
+    }
+
+    &.nav-fold-from-4 {
+      > ul > li > ul > li > ul > li ul li {
+        @include navFoldTouched;
+        @include navFoldIcons;
+      }
+    }
+
+    &.nav-fold-from-5 {
+      > ul > li > ul > li > ul > li > ul > li ul li {
+        @include navFoldTouched;
+        @include navFoldIcons;
       }
     }
   }
