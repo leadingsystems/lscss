@@ -20,7 +20,3 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation}, mirror=1)";
   transform: scale($horiz, $vert);
 }
-
-%fa-icon {
-  @include fa-icon;
-}

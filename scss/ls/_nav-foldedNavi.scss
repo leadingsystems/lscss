@@ -47,7 +47,6 @@ ul.useFoldedNavi {
       border: 0;
       padding: .5rem;
       cursor: pointer;
-      @extend %fa-icon;
       @extend .fas;
       line-height: inherit;
 
