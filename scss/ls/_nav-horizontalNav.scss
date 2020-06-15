@@ -2,16 +2,9 @@
   width: 100%;
   left: 0;
   right: 0;
-
-  &:not(.useFoldedNavi) {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-
-  &.useFoldedNavi {
-    display: block;
-  }
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 @mixin dropdownSecondLevelUlTouchedOrHover(){
@@ -51,23 +44,21 @@ nav.horizontalNavigation,
         box-shadow: $ls-shadow-l;
         padding: 2rem;
 
-        &:not(.useFoldedNavi) {
-          > li {
-            padding: 2rem;
-            margin-left: 0;
+        > li {
+          padding: 2rem;
+          margin-left: 0;
 
-            > a,
-            > span,
-            > strong {
-              font-weight: $ls-font-weight-bold;
-              display: block;
-              border-bottom: .1rem solid $ls-border-color-1;
-            }
+          > a,
+          > span,
+          > strong {
+            font-weight: $ls-font-weight-bold;
+            display: block;
+            border-bottom: .1rem solid $ls-border-color-1;
+          }
 
-            > ul {
-              > li {
-                margin-left: 0;
-              }
+          > ul {
+            > li {
+              margin-left: 0;
             }
           }
         }
