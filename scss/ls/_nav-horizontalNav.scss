@@ -27,15 +27,15 @@
 
 @mixin navFoldIconsHorizontalFirstLevel() {
   > a.submenu {
-    padding-right: 1rem;
+    padding-right: 1.6rem;
     position: relative;
 
     &::after {
       @extend .fa;
       content: fa-content($fa-var-plus);
       position: absolute;
-      right: .2rem;
-      top: .7rem;
+      right: 0.32rem;
+      top: 1.12rem;
       font-size: 50%;
     }
   }
@@ -49,15 +49,15 @@
 
 @mixin navFoldIconsDropdown() {
   a.submenu {
-    padding-right: 1rem;
+    padding-right: 1.6rem;
     position: relative;
 
     &::after {
       @extend .fa;
       content: fa-content($fa-var-plus);
       position: absolute;
-      right: .2rem;
-      top: .7rem;
+      right: 0.32rem;
+      top: 1.12rem;
       font-size: 50%;
     }
   }
@@ -80,7 +80,7 @@ nav.horizontalNavigation {
       @include navFoldIconsHorizontalFirstLevel;
 
       &:not(:last-child) {
-        margin-right: 1rem;
+        margin-right: 1.6rem;
       }
 
       > ul {
@@ -88,10 +88,10 @@ nav.horizontalNavigation {
         display: none;
         background-color: $ls-color-6;
         box-shadow: $ls-shadow-l;
-        padding: 2rem;
+        padding: 3.2rem;
 
         > li {
-          padding: 2rem;
+          padding: 3.2rem;
           margin-left: 0;
 
           > a,
@@ -99,7 +99,7 @@ nav.horizontalNavigation {
           > strong {
             font-weight: $ls-font-weight-bold;
             display: block;
-            border-bottom: .1rem solid $ls-border-color-1;
+            border-bottom: 0.1rem solid $ls-border-color-1;
           }
 
           > ul {
@@ -158,7 +158,7 @@ nav.horizontalNavigation.dropdown {
         display: none;
         background-color: $ls-color-6;
         box-shadow: $ls-shadow-l;
-        padding: 2rem;
+        padding: 3.2rem;
 
         li {
           padding: 0;
