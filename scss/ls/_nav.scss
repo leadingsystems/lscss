@@ -1,7 +1,18 @@
-@mixin navFoldTouched() {
+@mixin navFoldUntouched() {
+  ul {
+    /*
+     * CSS doesn't support transitions from height 0 to height auto, so without any additional javascript,
+     * this styling will toggle submenus without a soft transition. Using javascript the height of an
+     * element that is not collapsed can be set to a specific number, thus making the soft transition work.
+     */
+    overflow: hidden;
+    transition: height 1s ease-out;
+    height: auto;
+  }
+
   &:not(.touched):not(.trail):not(.active) {
     ul {
-      display: none;
+      height: 0;
     }
   }
 }
@@ -82,35 +93,35 @@ nav.lscss-standard-navigation {
     &.nav-fold,
     &.nav-fold-from-1 {
       ul li {
-        @include navFoldTouched;
+        @include navFoldUntouched;
         @include navFoldIcons;
       }
     }
 
     &.nav-fold-from-2 {
       > ul > li ul li {
-        @include navFoldTouched;
+        @include navFoldUntouched;
         @include navFoldIcons;
       }
     }
 
     &.nav-fold-from-3 {
       > ul > li > ul > li ul li {
-        @include navFoldTouched;
+        @include navFoldUntouched;
         @include navFoldIcons;
       }
     }
 
     &.nav-fold-from-4 {
       > ul > li > ul > li > ul > li ul li {
-        @include navFoldTouched;
+        @include navFoldUntouched;
         @include navFoldIcons;
       }
     }
 
     &.nav-fold-from-5 {
       > ul > li > ul > li > ul > li > ul > li ul li {
-        @include navFoldTouched;
+        @include navFoldUntouched;
         @include navFoldIcons;
       }
     }
