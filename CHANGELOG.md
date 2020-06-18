@@ -1,5 +1,7 @@
 Leading Systems LSCSS changelog
 ===========================================
+##### 1.0.0 beta1 (2020-06-18)
+
 ##### 0.0.3 (2019-12-31)
 Switch from LESS to SASS/SCSS
 
