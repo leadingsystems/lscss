@@ -1,14 +1,18 @@
 # Leading Systems LSCSS
 
-## Getting started
-After installing LSCSS, the scss framework is located in assets/lscss.
+## What is LSCSS?
+LSCSS is a SASS/SCSS framework whose goal it is to standardize the general workflow typically used in
+LS projects. Therefore, LSCSS takes care of the bootstrap and fontawesome integration and acts as the
+central lynchpin for all styling purposes that other LS components (e.g. Merconis, LSJS etc.) can rely on.
 
-**Please note:** The files in this directory may not be modified.
+## Getting started
+After installing LSCSS, the LSCSS framework is located in assets/lscss.
+
+***Please note:** The files in this directory must not be modified.*
 
 Instead, you create your own custom scss file, include the LSCSS framework and do all your work here.
 
-The custom scss file should be created in **files/styles** or **files/lscss** (whatever you like best)
-and, in order to make the purpose of the file obvious, it should be named **lscss-project.scss**
+The custom scss file should be created in **files/lscss** and, in order to make the purpose of the file obvious, it should be named **lscss-project.scss**
 
 In Contao, the extension "leadingsystems/contao-lscss4c" has to be installed in order to be able to
 easily load lscss stylesheets. With this extension installed, you will find in the layout settings some
@@ -18,22 +22,25 @@ The lscss-project.scss file should only contain a few imports:
 
 
 ```
-@import "../../assets/lscss/lscss.scss";
-
 @import "_variables.scss";
+
+@import "../../assets/lscss/lscss.scss";
 
 @import "_fonts.scss";
 
 @import "_custom.scss";
 ```
 
-The first import loads the lscss framework itself. The other imports are project specific files which
+The file lscss.scss contains the lscss framework itself. The other imports are project specific files which
 technically are not mandatory but of course it makes sense to use them. Therefore, create the files
 "_variables.scss", "_fonts.scss" and "_custom.scss" inside the same directory where lscss-project.scss
 is located as well.
 
 `_variables.scss` is the file in which you override variables defined in the LSCSS framework if necessary.
 Of course, you can also define new variables.
+
+***IMPORTANT**: In order to override the default lscss or bootstrap variables, it is mandatory to import
+the custom variables file before importing lscss!*
 
 `_fonts.scss` contains the @font-face rules for loading fonts
 

@@ -3,17 +3,28 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem;
+  padding: 3.2rem;
   color: $ls-color-white;
   background-color: $ls-color-black;
   z-index: 999999;
   overflow: hidden;
   opacity: .85;
-  animation: hide-no-js-info 4s ease-in 0s forwards;
+  animation: hide-no-js-info 6s ease-in-out 0s forwards;
 }
 
 @keyframes hide-no-js-info {
-  50% {
+  0% {
+    opacity: 0;
+    top: -100rem;
+  }
+
+  25% {
+    opacity: 1;
+    top: 0;
+  }
+
+  75% {
+    opacity: 1;
     top: 0;
   }
 

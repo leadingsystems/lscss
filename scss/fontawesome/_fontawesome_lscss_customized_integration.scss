@@ -1,0 +1,10 @@
+/*
+ We integrate Font Awesome in a special way that gives us all the convenience we need, but doesn't slow down
+ scss rendering during development when no caching can be used. This basically means that we use mostly the
+ pre-compiled version of Font Awesome and only use scss where it is absolutely necessary.
+ */
+@import "solid";
+@import "brands";
+@import "variables";
+@import "mixins";
+@import "fontawesome";

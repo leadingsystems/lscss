@@ -1,4 +1,47 @@
-nav {
+@mixin navFoldUntouched() {
+  ul {
+    /*
+     * CSS doesn't support transitions from height 0 to height auto, so without any additional javascript,
+     * this styling will toggle submenus without a soft transition. Using javascript the height of an
+     * element that is not collapsed can be set to a specific number, thus making the soft transition work.
+     */
+    overflow: hidden;
+    transition: height 1s ease-out;
+    height: auto;
+  }
+
+  &:not(.touched):not(.trail):not(.active) {
+    ul {
+      height: 0;
+    }
+  }
+}
+
+@mixin navFoldIcons() {
+  &:not(.trail):not(.active) {
+    a.submenu {
+      padding-right: 1.6rem;
+      position: relative;
+
+      &::after {
+        @extend .fa;
+        content: fa-content($fa-var-plus);
+        position: absolute;
+        right: 0.32rem;
+        top: 1.12rem;
+        font-size: 50%;
+      }
+    }
+
+    &.touched {
+      > a.submenu::after {
+        content: fa-content($fa-var-minus);
+      }
+    }
+  }
+}
+
+nav.lscss-standard-navigation {
   overflow: visible;
   z-index: 1000;
   position: relative;
@@ -16,13 +59,14 @@ nav {
       strong {
         display: block;
 
-        &.trail {
+        &.trail,
+        &.active {
           font-weight: $ls-font-weight-bold;
         }
       }
 
       &:last-child {
-        margin-bottom: 1rem;
+        margin-bottom: 1.6rem;
       }
     }
   }
@@ -35,8 +79,50 @@ nav {
     > li {
       ul {
         li {
-          margin-left: 1.5rem;
+          margin-left: 2.4rem;
         }
+      }
+    }
+  }
+
+  /*
+    <- Plus/minus icons
+   */
+
+  &.useTouchNavi {
+    &.nav-fold,
+    &.nav-fold-from-1 {
+      ul li {
+        @include navFoldUntouched;
+        @include navFoldIcons;
+      }
+    }
+
+    &.nav-fold-from-2 {
+      > ul > li ul li {
+        @include navFoldUntouched;
+        @include navFoldIcons;
+      }
+    }
+
+    &.nav-fold-from-3 {
+      > ul > li > ul > li ul li {
+        @include navFoldUntouched;
+        @include navFoldIcons;
+      }
+    }
+
+    &.nav-fold-from-4 {
+      > ul > li > ul > li > ul > li ul li {
+        @include navFoldUntouched;
+        @include navFoldIcons;
+      }
+    }
+
+    &.nav-fold-from-5 {
+      > ul > li > ul > li > ul > li > ul > li ul li {
+        @include navFoldUntouched;
+        @include navFoldIcons;
       }
     }
   }
@@ -55,4 +141,3 @@ nav.onlyShowFirstLevel,
 
 @import "_nav-variables.scss";
 @import "_nav-horizontalNav.scss";
-@import "_nav-foldedNavi.scss";
