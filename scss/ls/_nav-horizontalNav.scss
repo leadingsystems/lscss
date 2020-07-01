@@ -26,17 +26,20 @@
 }
 
 @mixin navFoldIconsHorizontalFirstLevel() {
-  > a.submenu {
-    padding-right: 1.6rem;
-    position: relative;
+  > a,
+  > strong {
+    &.submenu {
+      padding-right: 1.6rem;
+      position: relative;
 
-    &::after {
-      @extend .fa;
-      content: fa-content($fa-var-plus);
-      position: absolute;
-      right: 0.32rem;
-      top: 1.12rem;
-      font-size: 50%;
+      &::after {
+        @extend .fa;
+        content: fa-content($fa-var-plus);
+        position: absolute;
+        right: 0.32rem;
+        top: 1.12rem;
+        font-size: 50%;
+      }
     }
   }
 
