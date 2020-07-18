@@ -1,0 +1,109 @@
+[class^="icon-"], [class*=" icon-"], [class^="ls-icon-"], [class*=" ls-icon-"] {
+  @extend .ls-icon;
+}
+
+.icon-adresse_01::before {
+  content: ls-icon-content($lsi-var-adresse_01);
+}
+.icon-adresse_02::before {
+  content: ls-icon-content($lsi-var-adresse_02);
+}
+.icon-eco-verpackung_01::before {
+  content: ls-icon-content($lsi-var-eco-verpackung_01);
+}
+.icon-eco-verpackung_02::before {
+  content: ls-icon-content($lsi-var-eco-verpackung_02);
+}
+.icon-eco-verpackung_03::before {
+  content: ls-icon-content($lsi-var-eco-verpackung_03);
+}
+.icon-eingeben_01::before {
+  content: ls-icon-content($lsi-var-eingeben_01);
+}
+.icon-lieferung_01::before {
+  content: ls-icon-content($lsi-var-lieferung_01);
+}
+.icon-lieferung_02::before {
+  content: ls-icon-content($lsi-var-lieferung_02);
+}
+.icon-lieferung_03::before {
+  content: ls-icon-content($lsi-var-lieferung_03);
+}
+.icon-login_01::before {
+  content: ls-icon-content($lsi-var-login_01);
+}
+.icon-login_02::before {
+  content: ls-icon-content($lsi-var-login_02);
+}
+.icon-mehr-produkte::before {
+  content: ls-icon-content($lsi-var-mehr-produkte);
+}
+.icon-meinshop_01::before {
+  content: ls-icon-content($lsi-var-meinshop_01);
+}
+.icon-meinshop_02::before {
+  content: ls-icon-content($lsi-var-meinshop_02);
+}
+.icon-produktion::before {
+  content: ls-icon-content($lsi-var-produktion);
+}
+.icon-rechnung_01::before {
+  content: ls-icon-content($lsi-var-rechnung_01);
+}
+.icon-rechnung_02::before {
+  content: ls-icon-content($lsi-var-rechnung_02);
+}
+.icon-schnelle-lieferung_01::before {
+  content: ls-icon-content($lsi-var-schnelle-lieferung_01);
+}
+.icon-schnelle-lieferung_02::before {
+  content: ls-icon-content($lsi-var-schnelle-lieferung_02);
+}
+.icon-schnelle-lieferung_03::before {
+  content: ls-icon-content($lsi-var-schnelle-lieferung_03);
+}
+.icon-sprache_01::before {
+  content: ls-icon-content($lsi-var-sprache_01);
+}
+.icon-sprache_02::before {
+  content: ls-icon-content($lsi-var-sprache_02);
+}
+.icon-sprache_03::before {
+  content: ls-icon-content($lsi-var-sprache_03);
+}
+.icon-suche_01::before {
+  content: ls-icon-content($lsi-var-suche_01);
+}
+.icon-suche_02::before {
+  content: ls-icon-content($lsi-var-suche_02);
+}
+.icon-warenkorb_01::before {
+  content: ls-icon-content($lsi-var-warenkorb_01);
+}
+.icon-warenkorb_02::before {
+  content: ls-icon-content($lsi-var-warenkorb_02);
+}
+.icon-warenkorb_03::before {
+  content: ls-icon-content($lsi-var-warenkorb_03);
+}
+.icon-warenkorb_04::before {
+  content: ls-icon-content($lsi-var-warenkorb_04);
+}
+.icon-wunschliste_01::before {
+  content: ls-icon-content($lsi-var-wunschliste_01);
+}
+.icon-wunschliste_02::before {
+  content: ls-icon-content($lsi-var-wunschliste_02);
+}
+.icon-wunschliste_03::before {
+  content: ls-icon-content($lsi-var-wunschliste_03);
+}
+.icon-zahlung_01::before {
+  content: ls-icon-content($lsi-var-zahlung_01);
+}
+.icon-zahlung_02::before {
+  content: ls-icon-content($lsi-var-zahlung_02);
+}
+.icon-zahlung_03::before {
+  content: ls-icon-content($lsi-var-zahlung_03);
+}
