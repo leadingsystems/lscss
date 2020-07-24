@@ -86,6 +86,10 @@ nav.horizontalNavigation {
         margin-right: 1.6rem;
       }
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       > ul {
         position: absolute;
         display: none;

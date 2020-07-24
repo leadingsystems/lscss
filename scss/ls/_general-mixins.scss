@@ -4,6 +4,16 @@
   margin-right: auto;
   padding-left: 12rem;
   padding-right: 12rem;
+
+  @media only screen and(max-width: 1099px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @media screen and(max-width: 759px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 @mixin ls_narrowContentWrapper() {
