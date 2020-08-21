@@ -16,10 +16,38 @@
   }
 }
 
+@mixin ls_mediumContentWrapper() {
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10rem;
+  padding-right: 10rem;
+
+  @media only screen and(max-width: 1099px) {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+
+  @media screen and(max-width: 499px) {
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+  }
+}
+
 @mixin ls_narrowContentWrapper() {
   max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10rem;
   padding-right: 10rem;
+
+  @media only screen and(max-width: 1099px) {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+
+  @media screen and(max-width: 499px) {
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+  }
 }
