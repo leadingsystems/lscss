@@ -1,6 +1,6 @@
 @mixin ls_contentWrapper() {
   width: 190rem;
-  max-width: 90vw;
+  max-width: 85vw;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -8,7 +8,7 @@
 
 @mixin ls_mediumContentWrapper() {
   width: 120rem;
-  max-width: 90vw;
+  max-width: 85vw;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -16,7 +16,7 @@
 
 @mixin ls_narrowContentWrapper() {
   width: 90rem;
-  max-width: 90vw;
+  max-width: 85vw;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -24,7 +24,7 @@
 
 @mixin ls_superNarrowContentWrapper() {
   width: 60rem;
-  max-width: 90vw;
+  max-width: 85vw;
   margin-left: auto;
   margin-right: auto;
   position: relative;
