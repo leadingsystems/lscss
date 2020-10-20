@@ -29,3 +29,18 @@
   margin-right: auto;
   position: relative;
 }
+
+@mixin ls_autohideCenterMessage {
+  @include ls_autohide;
+  margin: auto;
+  padding: 4rem;
+  position: fixed;
+  width: 60%;
+  text-align: center;
+  z-index: 99900;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $ls-color-black;
+  color: $ls-color-white;
+}

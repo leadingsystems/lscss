@@ -1,0 +1,28 @@
+@keyframes ls-animation-fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  97% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ls-animation-autohide {
+  to {
+    width:0;
+    height:0;
+    overflow:hidden;
+    padding:0;
+    opacity:0;
+  }
+}
+
+@mixin ls_autohide {
+  animation: ls-animation-autohide 0s ease-in 3s forwards, ls-animation-fade-out 3s ease-in 0s forwards;
+  animation-fill-mode: forwards;
+}
