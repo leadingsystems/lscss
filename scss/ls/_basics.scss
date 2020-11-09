@@ -7,7 +7,7 @@ body {
   font-family: $ls-font-family;
   font-size: $ls-font-size-body;
 
-  @include ls_decreaseFontSizes($ls-font-size-body);
+  @include ls_decreaseFontSizes($ls-font-size-body, $ls-font-resize-steps-standard-body);
 
   font-weight: $ls-font-weight-normal;
   color: $ls-color-black;
