@@ -48,8 +48,13 @@ $ls-border-radius-s: 0.32rem !default;
 /* MISC */
 $ls-margin-bottom-standard: 0.8rem;
 
-$ls-font-resize-steps-standard: (
+$ls-font-resize-steps-standard-headlines: (
   1099px: 0.9,
   799px: 0.82,
   499px: 0.74
+) !default;
+
+$ls-font-resize-steps-standard-body: (
+  799px: 0.9,
+  499px: 0.85
 ) !default;

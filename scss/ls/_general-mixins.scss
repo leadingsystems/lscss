@@ -97,7 +97,7 @@
   }
 }
 
-@mixin ls_decreaseFontSizes($font-size-base, $steps: $ls-font-resize-steps-standard) {
+@mixin ls_decreaseFontSizes($font-size-base, $steps: $ls-font-resize-steps-standard-headlines) {
   @each $breakpoint, $percentage in $steps {
     @media screen and(max-width: $breakpoint) {
       font-size: $font-size-base * $percentage;
