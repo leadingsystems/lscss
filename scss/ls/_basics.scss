@@ -1,13 +1,91 @@
-body:not(.user-is-tabbing) {
-  a,
-  button,
-  input,
-  select,
-  textarea {
-    &:focus {
-      outline: none;
+html {
+  font-size: $ls-html-font-size-base;
+}
+
+body {
+  display: block;
+  font-family: $ls-font-family;
+  font-size: $ls-font-size-body;
+
+  @include ls_decreaseFontSizes($ls-font-size-body);
+
+  font-weight: $ls-font-weight-normal;
+  color: $ls-color-black;
+  background: $ls-color-white;
+  width: 100%;
+
+  &:not(.lsjs-active) .hideWhenNoLsjs {
+    display: none !important;
+  }
+
+  &.lsjs-active .hideWhenLsjs {
+    display: none !important;
+  }
+
+  &:not(.user-is-tabbing) {
+    a,
+    button,
+    input,
+    select,
+    textarea {
+      &:focus {
+        outline: none;
+      }
     }
   }
+}
+
+h1 {
+  font-size: $ls-font-size-h1;
+
+  @include ls_decreaseFontSizes($ls-font-size-h1);
+
+  margin: 0 0 $ls-margin-bottom-standard;
+  font-weight: $ls-font-weight-normal;
+}
+h2 {
+  font-size: $ls-font-size-h2;
+
+  @include ls_decreaseFontSizes($ls-font-size-h2);
+
+  margin: 0 0 $ls-margin-bottom-standard;
+  font-weight: $ls-font-weight-normal;
+}
+h3 {
+  font-size: $ls-font-size-h3;
+
+  @include ls_decreaseFontSizes($ls-font-size-h3);
+
+  margin: 0 0 $ls-margin-bottom-standard;
+  font-weight: $ls-font-weight-normal;
+}
+h4 {
+  font-size: $ls-font-size-h4;
+
+  @include ls_decreaseFontSizes($ls-font-size-h4);
+
+  margin: 0 0 $ls-margin-bottom-standard;
+  font-weight: $ls-font-weight-normal;
+}
+h5 {
+  font-size: $ls-font-size-h5;
+
+  @include ls_decreaseFontSizes($ls-font-size-h5);
+
+  margin: 0 0 $ls-margin-bottom-standard;
+  font-weight: $ls-font-weight-normal;
+}
+h6 {
+  font-size: $ls-font-size-h6;
+
+  @include ls_decreaseFontSizes($ls-font-size-h6);
+
+  margin: 0 0 $ls-margin-bottom-standard;
+  font-weight: $ls-font-weight-normal;
+}
+
+p {
+  margin: 0 0 $ls-margin-bottom-standard;
 }
 
 a {

@@ -1,16 +1,12 @@
-/*
-  $ls-***-base    Grundlegende Einstellung für mehrere Elemente
-
-*/
-
 /* GRUNDEINSTELLUNGEN */
 
 /* SETUP */
 $ls-html-font-size-base: 10px !default; // = 1 rem
-$ls-font-size-base: 1.6rem !default; // Orientiert sich an $ls-html-font-size-base
+$ls-font-size-body: 1.6rem !default; // Orientiert sich an $ls-html-font-size-base
 $ls-font-weight-normal: 400 !default;
 $ls-font-weight-medium: 500 !default;
 $ls-font-weight-bold: 700 !default;
+$ls-font-family: 'Tahoma', 'Helvetica', 'sans-serif' !default;
 $fa-font-path: "../../../../../../assets/lscss/scss/fontawesome/webfonts" !default;
 $fa-font-display: auto !default;
 
@@ -19,6 +15,12 @@ $link-hover-decoration: none;
 
 
 /* HEADLINES */
+$ls-font-size-h1: 3.4rem;
+$ls-font-size-h2: 3rem;
+$ls-font-size-h3: 2.7rem;
+$ls-font-size-h4: 2.4rem;
+$ls-font-size-h5: 1.9rem;
+$ls-font-size-h6: 1.6rem;
 
 /* PARAGRAPHS */
 
@@ -43,10 +45,11 @@ $ls-shadow-l: 0.2rem 0.1rem 1rem #dddddd !default;
 $ls-border-color-1: #dddddd !default;
 $ls-border-radius-s: 0.32rem !default;
 
-/* Diverses */
+/* MISC */
+$ls-margin-bottom-standard: 0.8rem;
 
-$ls-reduced-header-max-width: 950px !default;
-
-$ls-oc-navi-max-width: $ls-reduced-header-max-width !default;
-
-$ls-header-transition-duration: .5s !default;
+$ls-font-resize-steps-standard: (
+  1099px: 0.9,
+  799px: 0.82,
+  499px: 0.74
+) !default;

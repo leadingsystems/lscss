@@ -58,7 +58,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: $ls_color-black;
+    background: $ls-color-black;
     transform: scaleX(0);
     transform-origin: 0 50%;
     transition-property: transform;
@@ -68,7 +68,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: $ls_color-white !important;
+    color: $ls-color-white !important;
     &:before {
       transform: scaleX(1);
     }
@@ -94,5 +94,13 @@
 
   &:hover::before {
     transform: scale(0, 1);
+  }
+}
+
+@mixin ls_decreaseFontSizes($font-size-base, $steps: $ls-font-resize-steps-standard) {
+  @each $breakpoint, $percentage in $steps {
+    @media screen and(max-width: $breakpoint) {
+      font-size: $font-size-base * $percentage;
+    }
   }
 }
