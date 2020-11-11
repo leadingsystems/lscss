@@ -1,0 +1,104 @@
+$ls-off-canvas-navbar-shadow-closed: 0 0 0 0.1rem #e1e1e1;
+$ls-off-canvas-navbar-shadow-open: 0 0 0 0.1rem rgba(0,0,0,0);
+
+#off-canvas-navi-container {
+  background-color: rgba($ls-color-black, 0.5);
+
+  @media only screen and (min-width: 420px) {
+    display: flex;
+  }
+
+  @media only screen and (max-width: 419px) {
+    padding: 0;
+  }
+}
+
+#off-canvas-navi-container-inside {
+  @include ls_narrowContentWrapper;
+  background-color: $ls-color-white;
+  padding: 5rem;
+  margin: auto;
+
+  @media only screen and (max-width: 419px) {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    max-width: unset;
+  }
+}
+
+#off-canvas-navi-toggler {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 99902;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+
+  .nav-bars {
+    position: absolute;
+    background-color: $ls-color-black;
+    width: 2.5rem;
+    height: 0.3125rem;
+    transition: transform .13s cubic-bezier(.55, .055, .675, .19) .13s, background-color 0.3s linear 0s;
+    top: auto;
+    bottom: 0;
+    box-shadow: $ls-off-canvas-navbar-shadow-closed;
+
+    &:before {
+      background-color: $ls-color-black;
+      width: 2.5rem;
+      height: 0.3125rem;
+      top: -.83333rem;
+      right: 0;
+      position: absolute;
+      content: '';
+      transition: top .12s cubic-bezier(.33333, .66667, .66667, 1) .2s, transform .13s cubic-bezier(.55, .055, .675, .19), background-color 0.3s linear 0s;
+      box-shadow: $ls-off-canvas-navbar-shadow-closed;
+    }
+
+    &:after {
+      background-color: $ls-color-black;
+      width: 2.5rem;
+      height: 0.3125rem;
+      top: -1.6666rem;
+      right: 0;
+      position: absolute;
+      content: '';
+      transition: top .2s cubic-bezier(.33333, .66667, .66667, 1) .2s, opacity .1s linear, background-color 0.3s linear 0s;
+      box-shadow: $ls-off-canvas-navbar-shadow-closed;
+    }
+  }
+
+  &.open {
+    .nav-bars {
+      @media only screen and (min-width: 420px) {
+        background-color: $ls-color-white;
+      }
+      transition: transform .13s cubic-bezier(.215, .61, .355, 1) .22s, background-color 0.3s linear 0s;
+      transform: translate3d(0, -10px, 0) rotate(-45deg);
+      box-shadow: $ls-off-canvas-navbar-shadow-open;
+
+      &:before {
+        @media only screen and (min-width: 420px) {
+          background-color: $ls-color-white;
+        }
+        top: 0;
+        transition: top .1s cubic-bezier(.33333, 0, .66667, .33333) .16s, transform .13s cubic-bezier(.215, .61, .355, 1) .25s, background-color 0.3s linear 0s;
+        transform: rotate(-90deg);
+        box-shadow: $ls-off-canvas-navbar-shadow-open;
+      }
+
+      &:after {
+        @media only screen and (min-width: 420px) {
+          background-color: $ls-color-white;
+        }
+        top: 0;
+        transition: top .2s cubic-bezier(.33333, 0, .66667, .33333), opacity .1s linear .22s, background-color 0.3s linear 0s;
+        opacity: 0;
+        box-shadow: $ls-off-canvas-navbar-shadow-open;
+      }
+    }
+  }
+}
