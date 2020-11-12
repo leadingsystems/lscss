@@ -4,6 +4,12 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
+
+  [class*="layout-sidebar"] #main &,
+  [class*="layout-sidebar"] #left &,
+  [class*="layout-sidebar"] #right & {
+    max-width: 100%;
+  }
 }
 
 @mixin ls_mediumContentWrapper() {
@@ -12,6 +18,12 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
+
+  [class*="layout-sidebar"] #main &,
+  [class*="layout-sidebar"] #left &,
+  [class*="layout-sidebar"] #right & {
+    max-width: 100%;
+  }
 }
 
 @mixin ls_narrowContentWrapper() {
@@ -20,6 +32,12 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
+
+  [class*="layout-sidebar"] #main &,
+  [class*="layout-sidebar"] #left &,
+  [class*="layout-sidebar"] #right & {
+    max-width: 100%;
+  }
 }
 
 @mixin ls_superNarrowContentWrapper() {
@@ -28,6 +46,12 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
+
+  [class*="layout-sidebar"] #main &,
+  [class*="layout-sidebar"] #left &,
+  [class*="layout-sidebar"] #right & {
+    max-width: 100%;
+  }
 }
 
 @mixin ls_autohideCenterMessage() {
