@@ -65,6 +65,9 @@ $ls-font-resize-steps-standard-body: (
  * Modified bootstrap variables -->
  */
 $grid-gutter-width: 6rem;
+$grid-gutter-width-big: 9rem;
+$grid-gutter-width-small: 3rem;
+$grid-gutter-width-super-small: 1.5rem;
 $grid-breakpoints: (
   xs: 0,
   4: 400px,
