@@ -55,6 +55,7 @@
 }
 
 @mixin ls_defaultButton_base() {
+  display: inline-block;
   background: $ls-color-white;
   text-shadow: none;
   color: $ls-color-black;
