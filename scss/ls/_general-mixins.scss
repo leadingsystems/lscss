@@ -60,7 +60,6 @@
   color: $ls-color-black;
   border: solid 0.2rem $ls-color-black;
   padding: 1.2rem 3rem;
-  margin-left: 0.5rem;
 }
 
 @mixin ls_defaultButton() {
@@ -94,7 +93,7 @@
   position: relative;
   transition-property: color;
   transition-duration: 0.3s;
-  &:before {
+  &:after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -113,7 +112,7 @@
   &:active,
   &:focus {
     color: $ls-color-white !important;
-    &:before {
+    &:after {
       transform: scaleX(1);
     }
   }
