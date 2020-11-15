@@ -54,6 +54,26 @@
   }
 }
 
+@mixin ls_defaultButton_base() {
+  background: $ls-color-white;
+  text-shadow: none;
+  color: $ls-color-black;
+  border: solid 0.2rem $ls-color-black;
+  padding: 1.2rem 3rem;
+  margin-left: 0.5rem;
+}
+
+@mixin ls_defaultButton() {
+  @include ls_defaultButton_base;
+}
+
+@mixin ls_sameLine() {
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
 @mixin ls_autohideCenterMessage() {
   @include ls_autohide;
   margin: auto;
