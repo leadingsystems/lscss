@@ -62,3 +62,66 @@ If you use Merconis, you have to include the Merconis stylesheets like this:
 @import "../../vendor/leadingsystems/contao-merconis/src/Resources/contao/lscss/_merconis.scss";
 [...]
 ```
+
+## How to use LSCSS icons
+LSCSS comes with support for fontawesome but it also has its very own icon set. Using LSCSS icons
+is very simple.
+```
+<i class="lsi lsi-payment-01"></i>
+```
+Any html element can become an icon by just adding the class "lsi" and then specifying
+exactly which icon to use with one of the named icon classes (lsi-*)
+
+LSCSS icons can also be used by in scss files. The following example shows how to apply an icon
+style to an html element using lsi mixins and variables in scss.
+```
+<h2>Lorem Ipsum</h2>
+```
+```
+h2::before {
+    @extend .lsi;
+    content: $lsi-telescope-01;
+}
+```
+
+#### Updating the LSCSS icon set in the LSCSS core
+Of course, updating the icon set in the LSCSS core isn't something regular users would do
+but this document should cover it anyway.
+
+We created the icon set with icomoon.io which is a really great tool. The IcoMoon app can
+be used without any license requirements when using own vectors. Using icon packs provided
+by the IcoMoon library, however, requires the specific license requirements to be met.
+
+###### Adding new icons to the icon set
+In order to add new icons to the icon set it is important to begin by importing the existing
+icon set into the IcoMoon app. The app has an import option which allows the **selection.json** file
+to be importet. This file was created with the previous export and thus should be included in
+the lscss-icons folder currently existing in LSCSS. By importing this file into the app
+all meta data will already be imported and that's very important because only with exactly the
+same meta data as before we can make sure that all variable names and class names etc. used
+in LSCSS will still work with the updated icon set. Warning: IcoMoon allows svg files to be
+imported as well and some meta data also exists in svg files but important meta data is missing
+and therefore svg files must not be used to import the current icon set.
+
+When the new icons have been added to the icon set in the IcoMoon app, the icon set must be
+exported with the "generate font" option. Before downloading the generated font there is a
+settings dialog which should already have all the right settings because they have also
+been imported with the settings.json file.
+
+For the sake of completeness, here are the important export settings:
+- Font Name: lscss-icons
+- Class Prefix: lsi-
+- Include metadata in fonts: check
+- Generate preprocessor variables for Sass
+- CSS Selector - Use a class: .lsi
+- The version should be increased accordingly
+
+The exported file will be a zip file named like "lscss-icons-v1.0". Extract the zip file and
+rename the extracted folder to "lscss-icons" (removing the version information).
+
+Then copy the folder "lscss-icons" to the place where the previous version of this folder
+lives inside LSCSS.
+
+###### Using own icons on a project level without having to update the LSCSS core
+Regular users would not update the icon set in the LSCSS core if they need new or modified
+icons but instead they would add a copy of the icon set to their project level lscss folder.

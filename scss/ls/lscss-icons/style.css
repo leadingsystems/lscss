@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'lscss-icons';
+  src:  url('fonts/lscss-icons.eot?evwlz1');
+  src:  url('fonts/lscss-icons.eot?evwlz1#iefix') format('embedded-opentype'),
+    url('fonts/lscss-icons.ttf?evwlz1') format('truetype'),
+    url('fonts/lscss-icons.woff?evwlz1') format('woff'),
+    url('fonts/lscss-icons.svg?evwlz1#lscss-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.lsi {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'lscss-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lsi-house-01:before {
+  content: "\e900";
+}
+.lsi-house-02:before {
+  content: "\e917";
+}
+.lsi-house-03:before {
+  content: "\e918";
+}
+.lsi-factory-01:before {
+  content: "\e919";
+}
+.lsi-location-01:before {
+  content: "\e902";
+}
+.lsi-location-02:before {
+  content: "\e920";
+}
+.lsi-location-03:before {
+  content: "\e921";
+}
+.lsi-box-01:before {
+  content: "\e904";
+}
+.lsi-box-02:before {
+  content: "\e905";
+}
+.lsi-box-03:before {
+  content: "\e906";
+}
+.lsi-box-04:before {
+  content: "\e916";
+}
+.lsi-pen-01:before {
+  content: "\e907";
+}
+.lsi-truck-01:before {
+  content: "\e909";
+}
+.lsi-delivery-01:before {
+  content: "\e912";
+}
+.lsi-delivery-02:before {
+  content: "\e913";
+}
+.lsi-delivery-03:before {
+  content: "\e91c";
+}
+.lsi-delivery-04:before {
+  content: "\e91d";
+}
+.lsi-delivery-05:before {
+  content: "\e91e";
+}
+.lsi-person-01:before {
+  content: "\e914";
+}
+.lsi-person-02:before {
+  content: "\e915";
+}
+.lsi-payment-01:before {
+  content: "\e91a";
+}
+.lsi-payment-02:before {
+  content: "\e91b";
+}
+.lsi-wallet-01:before {
+  content: "\e92d";
+}
+.lsi-credit-card-01:before {
+  content: "\e92e";
+}
+.lsi-wallet-02:before {
+  content: "\e92f";
+}
+.lsi-globe-01:before {
+  content: "\e91f";
+}
+.lsi-magnifier-01:before {
+  content: "\e922";
+}
+.lsi-telescope-01:before {
+  content: "\e923";
+}
+.lsi-shopping-bag-01:before {
+  content: "\e926";
+}
+.lsi-heart-01:before {
+  content: "\e928";
+}
+.lsi-list-01:before {
+  content: "\e92b";
+}
+.lsi-list-02:before {
+  content: "\e92c";
+}
