@@ -11,6 +11,14 @@ $ls-off-canvas-navbar-shadow-open: 0 0 0 0.1rem rgba(0,0,0,0);
   @media only screen and (max-width: 419px) {
     padding: 0;
   }
+
+  li {
+    margin-top: 1rem;
+    font-size: $ls-font-size-h4;
+    @include ls_decreaseFontSizes($ls-font-size-h4);
+    border-top: 0.1rem dashed #000;
+    padding-top: 1rem;
+  }
 }
 
 #off-canvas-navi-container-inside {
