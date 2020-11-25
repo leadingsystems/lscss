@@ -10,36 +10,33 @@
     height: auto;
   }
 
-  //&:not(.touched):not(.trail):not(.active) {
   &:not(.touched) {
-    ul {
+    > ul {
       height: 0;
     }
   }
 }
 
 @mixin navFoldIcons() {
-  //&:not(.trail):not(.active) {
-    a.submenu {
-      padding-right: 1.6rem;
-      position: relative;
+  a.submenu {
+    padding-right: 1.6rem;
+    position: relative;
 
-      &::after {
-        @extend .fa;
-        content: fa-content($fa-var-plus);
-        position: absolute;
-        right: 0.32rem;
-        top: 1.12rem;
-        font-size: 50%;
-      }
+    &::after {
+      @extend .fa;
+      content: fa-content($fa-var-plus);
+      position: absolute;
+      right: 0.32rem;
+      top: 1.12rem;
+      font-size: 50%;
     }
+  }
 
-    &.touched {
-      > a.submenu::after {
-        content: fa-content($fa-var-minus);
-      }
+  &.touched {
+    > a.submenu::after {
+      content: fa-content($fa-var-minus);
     }
-  //}
+  }
 }
 
 nav.lscss-standard-navigation {
