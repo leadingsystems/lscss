@@ -10,7 +10,8 @@
     height: auto;
   }
 
-  &:not(.touched):not(.trail):not(.active) {
+  //&:not(.touched):not(.trail):not(.active) {
+  &:not(.touched) {
     ul {
       height: 0;
     }
@@ -18,7 +19,7 @@
 }
 
 @mixin navFoldIcons() {
-  &:not(.trail):not(.active) {
+  //&:not(.trail):not(.active) {
     a.submenu {
       padding-right: 1.6rem;
       position: relative;
@@ -38,7 +39,7 @@
         content: fa-content($fa-var-minus);
       }
     }
-  }
+  //}
 }
 
 nav.lscss-standard-navigation {
