@@ -18,9 +18,9 @@
 }
 
 @mixin navFoldIcons() {
-  a,
-  span,
-  strong {
+  > a,
+  > span,
+  > strong {
     &.submenu {
       padding-right: 1.6rem;
       position: relative;
@@ -101,6 +101,18 @@ nav.lscss-standard-navigation {
       ul li {
         @include navFoldUntouched;
         @include navFoldIcons;
+      }
+    }
+
+    &.nav-fold-from-1-exclude-2 {
+      > ul > li {
+        @include navFoldUntouched;
+        @include navFoldIcons;
+
+        > ul > li ul li {
+          @include navFoldUntouched;
+          @include navFoldIcons;
+        }
       }
     }
 
