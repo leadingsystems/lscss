@@ -9,23 +9,46 @@ nav.horizontalNavigation {
       > span,
       > strong {
         &.submenu {
-          padding-right: 1.6rem;
+          @if $ls-pseudo-element-for-toggler-icons == after {
+            padding-right: 1.6rem;
+          } @else {
+            padding-left: 1.6rem;
+          }
           position: relative;
 
-          &::after {
-            @extend .fa;
-            content: fa-content($fa-var-plus);
-            position: absolute;
-            right: 0.32rem;
-            top: 0.72rem;
-            font-size: 50%;
+          @if $ls-pseudo-element-for-toggler-icons == after {
+            &::after {
+              @extend .fa;
+              content: fa-content($fa-var-plus);
+              position: absolute;
+              right: 0;
+              top: 0.72rem;
+              font-size: 50%;
+            }
+          } @else {
+            &::before {
+              @extend .fa;
+              content: fa-content($fa-var-plus);
+              position: absolute;
+              left: 0;
+              top: 0.72rem;
+              font-size: 50%;
+            }
           }
         }
       }
 
       &.touched {
-        > a.submenu::after {
-          content: fa-content($fa-var-minus);
+        > a.submenu {
+          @if $ls-pseudo-element-for-toggler-icons == after {
+            &::after {
+              content: fa-content($fa-var-minus);
+            }
+          } @else {
+            &::before {
+              content: fa-content($fa-var-minus);
+            }
+          }
         }
       }
 
