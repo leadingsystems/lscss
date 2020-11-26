@@ -96,6 +96,16 @@ nav.lscss-standard-navigation {
 
   body.user-is-touching &.useTouchNavi,
   &.useTouchNavi.useTouchNaviOnNonTouchDevices {
+    &:not(.onlyHandleTouchOnTogglerElements) {
+      a,
+      span,
+      strong {
+        &.submenu {
+          cursor: default;
+        }
+      }
+    }
+
     &.nav-fold,
     &.nav-fold-from-1 {
       ul li {
