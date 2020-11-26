@@ -1,19 +1,9 @@
 @mixin dropdownSecondLevelUlTouchedOrHover(){
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  width: unset;
-  left: unset;
-  right: unset;
-  top: 100%;
+
 }
 
 @mixin dropdownThirdLevelUlTouchedOrHover(){
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  top: $ls-nav-dropdown-vertical-offset;
-  left: 100%;
+
 }
 
 @mixin navFoldIconsHorizontalFirstLevel() {
@@ -92,7 +82,25 @@ nav.horizontalNavigation {
         flex-wrap: wrap;
         background-color: $ls-color-6;
         box-shadow: $ls-shadow-l;
+
+        /* -->
+         * top and bottom padding would not work well with the height animation because if it is not animated
+         * separately (which can't be done easily) it appears and disappears instantly which makes the animation
+         * seem "jumpy". As a workaround, we only set the desired left and right padding directly on the ul element
+         * and we create the upper and lower padding by adding ::before and ::after pseudo elements which create
+         * the upper and lower distance with their height.
+         */
         padding: 0 3rem;
+
+        &::before,
+        &::after {
+          content: "";
+          height: 3rem;
+          width: 100%;
+        }
+        /*
+         * <--
+         */
 
         > li {
           padding: 3rem;
@@ -158,8 +166,15 @@ nav.horizontalNavigation.dropdown {
 
     > li {
       ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: unset;
+        left: unset;
+        right: unset;
+        top: 100%;
+
         position: absolute;
-        display: none;
         background-color: $ls-color-6;
         box-shadow: $ls-shadow-l;
         padding: 0 3rem;
@@ -185,14 +200,24 @@ nav.horizontalNavigation.dropdown {
         }
       }
 
+      > ul {
+        > li {
+          > ul {
+            top: $ls-nav-dropdown-vertical-offset;
+            left: 100%;
+          }
+        }
+      }
+
       &.touched {
         > ul {
-          @include dropdownSecondLevelUlTouchedOrHover;
+          overflow: visible !important;
+          //@include dropdownSecondLevelUlTouchedOrHover;
 
           li {
             &.touched {
               > ul {
-                @include dropdownThirdLevelUlTouchedOrHover;
+                //@include dropdownThirdLevelUlTouchedOrHover;
               }
             }
           }
@@ -206,12 +231,12 @@ nav.horizontalNavigation.dropdown {
       > li {
         &:hover {
           > ul {
-            @include dropdownSecondLevelUlTouchedOrHover;
+            //@include dropdownSecondLevelUlTouchedOrHover;
 
             li {
               &:hover {
                 > ul {
-                  @include dropdownThirdLevelUlTouchedOrHover;
+                  //@include dropdownThirdLevelUlTouchedOrHover;
                 }
               }
             }
