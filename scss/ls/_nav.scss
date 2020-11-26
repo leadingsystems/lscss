@@ -2,7 +2,7 @@
   ul {
     /*
      * CSS doesn't support transitions from height 0 to height auto, so without any additional javascript,
-     * this styling will toggle submenus without a soft transition. Using javascript the height of an
+     * this styling will toggle submenus without a soft transition. Using javascript, the height of an
      * element that is not collapsed can be set to a specific number, thus making the soft transition work.
      */
     overflow: hidden;
@@ -18,23 +18,32 @@
 }
 
 @mixin navFoldIcons() {
-  a.submenu {
-    padding-right: 1.6rem;
-    position: relative;
+  a,
+  strong {
+    &.submenu {
+      padding-right: 1.6rem;
+      position: relative;
+      cursor: pointer;
 
-    &::after {
-      @extend .fa;
-      content: fa-content($fa-var-plus);
-      position: absolute;
-      right: 0.32rem;
-      top: 1.12rem;
-      font-size: 50%;
+      &::after {
+        @extend .fa;
+        content: fa-content($fa-var-plus);
+        position: absolute;
+        right: 0.32rem;
+        top: 1.12rem;
+        font-size: 50%;
+      }
     }
   }
 
   &.touched {
-    > a.submenu::after {
-      content: fa-content($fa-var-minus);
+    > a,
+    > strong {
+      &.submenu {
+        &::after {
+          content: fa-content($fa-var-minus);
+        }
+      }
     }
   }
 }
