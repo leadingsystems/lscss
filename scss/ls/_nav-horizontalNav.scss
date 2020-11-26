@@ -18,21 +18,13 @@ nav.horizontalNavigation {
 
           @if $ls-pseudo-element-for-toggler-icons == after {
             &::after {
-              @extend .fa;
-              content: fa-content($fa-var-plus);
-              position: absolute;
+              @include iconStyleClosed;
               right: 0;
-              top: 0.72rem;
-              font-size: 50%;
             }
           } @else {
             &::before {
-              @extend .fa;
-              content: fa-content($fa-var-plus);
-              position: absolute;
+              @include iconStyleClosed;
               left: 0;
-              top: 0.72rem;
-              font-size: 50%;
             }
           }
         }
@@ -42,11 +34,11 @@ nav.horizontalNavigation {
         > a.submenu {
           @if $ls-pseudo-element-for-toggler-icons == after {
             &::after {
-              content: fa-content($fa-var-minus);
+              @include iconStyleOpen;
             }
           } @else {
             &::before {
-              content: fa-content($fa-var-minus);
+              @include iconStyleOpen;
             }
           }
         }
