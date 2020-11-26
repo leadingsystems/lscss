@@ -73,7 +73,7 @@ nav.lscss-standard-navigation {
       }
 
       &:last-child {
-        margin-bottom: 1.6rem;
+        //margin-bottom: 1.6rem;
       }
     }
   }
@@ -146,5 +146,4 @@ nav.onlyShowFirstLevel,
   }
 }
 
-@import "_nav-variables.scss";
 @import "_nav-horizontalNav.scss";

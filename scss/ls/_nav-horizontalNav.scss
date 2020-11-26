@@ -1,11 +1,3 @@
-@mixin dropdownSecondLevelUlTouchedOrHover(){
-
-}
-
-@mixin dropdownThirdLevelUlTouchedOrHover(){
-
-}
-
 @mixin navFoldIconsHorizontalFirstLevel() {
   > a,
   > strong {
@@ -21,28 +13,6 @@
         top: 0.72rem;
         font-size: 50%;
       }
-    }
-  }
-
-  &.touched {
-    > a.submenu::after {
-      content: fa-content($fa-var-minus);
-    }
-  }
-}
-
-@mixin navFoldIconsDropdown() {
-  a.submenu {
-    padding-right: 1.6rem;
-    position: relative;
-
-    &::after {
-      @extend .fa;
-      content: fa-content($fa-var-plus);
-      position: absolute;
-      right: 0.32rem;
-      top: 1.12rem;
-      font-size: 50%;
     }
   }
 
@@ -160,11 +130,20 @@ nav.horizontalNavigation.dropdown {
     li {
       position: relative;
       white-space: nowrap;
-
-      @include navFoldIconsDropdown;
     }
 
     > li {
+      > ul {
+        position: absolute;
+        background-color: $ls-color-6;
+        box-shadow: $ls-shadow-l;
+        padding: 0 3rem;
+
+        ul {
+          margin-left: 1rem;
+        }
+      }
+
       ul {
         display: flex;
         justify-content: flex-start;
@@ -174,73 +153,11 @@ nav.horizontalNavigation.dropdown {
         right: unset;
         top: 100%;
 
-        position: absolute;
-        background-color: $ls-color-6;
-        box-shadow: $ls-shadow-l;
-        padding: 0 3rem;
-
         li {
           padding: 0;
           margin-left: 0;
           display: inline-block;
-
-          > a,
-          > span,
-          > strong {
-            font-weight: $ls-font-weight-normal;
-            border-bottom: none;
-            display: inline-block;
-            padding-right: $ls-nav-dropdown-horizontal-distance;
-
-            &.trail,
-            &.active {
-              font-weight: $ls-font-weight-bold;
-            }
-          }
-        }
-      }
-
-      > ul {
-        > li {
-          > ul {
-            top: $ls-nav-dropdown-vertical-offset;
-            left: 100%;
-          }
-        }
-      }
-
-      &.touched {
-        > ul {
-          overflow: visible !important;
-          //@include dropdownSecondLevelUlTouchedOrHover;
-
-          li {
-            &.touched {
-              > ul {
-                //@include dropdownThirdLevelUlTouchedOrHover;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  &:not(.useTouchNaviOnNonTouchDevices) {
-    > ul {
-      > li {
-        &:hover {
-          > ul {
-            //@include dropdownSecondLevelUlTouchedOrHover;
-
-            li {
-              &:hover {
-                > ul {
-                  //@include dropdownThirdLevelUlTouchedOrHover;
-                }
-              }
-            }
-          }
+          width: 100%;
         }
       }
     }
