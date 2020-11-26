@@ -6,7 +6,7 @@
      * element that is not collapsed can be set to a specific number, thus making the soft transition work.
      */
     overflow: hidden;
-    transition: height 1s ease-out;
+    transition: height 0.3s ease-out;
     height: auto;
   }
 
@@ -19,6 +19,7 @@
 
 @mixin navFoldIcons() {
   a,
+  span,
   strong {
     &.submenu {
       padding-right: 1.6rem;
@@ -38,6 +39,7 @@
 
   &.touched {
     > a,
+    > span,
     > strong {
       &.submenu {
         &::after {
@@ -71,10 +73,6 @@ nav.lscss-standard-navigation {
           font-weight: $ls-font-weight-bold;
         }
       }
-
-      &:last-child {
-        //margin-bottom: 1.6rem;
-      }
     }
   }
 
@@ -96,7 +94,8 @@ nav.lscss-standard-navigation {
     <- Plus/minus icons
    */
 
-  &.useTouchNavi {
+  body.user-is-touching &.useTouchNavi,
+  &.useTouchNavi.useTouchNaviOnNonTouchDevices {
     &.nav-fold,
     &.nav-fold-from-1 {
       ul li {

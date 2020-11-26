@@ -1,29 +1,3 @@
-@mixin navFoldIconsHorizontalFirstLevel() {
-  > a,
-  > strong {
-    &.submenu {
-      padding-right: 1.6rem;
-      position: relative;
-
-      &::after {
-        @extend .fa;
-        content: fa-content($fa-var-plus);
-        position: absolute;
-        right: 0.32rem;
-        top: 0.72rem;
-        font-size: 50%;
-      }
-    }
-  }
-
-  &.touched {
-    > a.submenu::after {
-      content: fa-content($fa-var-minus);
-    }
-  }
-}
-
-
 nav.horizontalNavigation {
   > ul {
     display: flex;
@@ -31,7 +5,29 @@ nav.horizontalNavigation {
     > li {
       margin-bottom: 0;
 
-      @include navFoldIconsHorizontalFirstLevel;
+      > a,
+      > span,
+      > strong {
+        &.submenu {
+          padding-right: 1.6rem;
+          position: relative;
+
+          &::after {
+            @extend .fa;
+            content: fa-content($fa-var-plus);
+            position: absolute;
+            right: 0.32rem;
+            top: 0.72rem;
+            font-size: 50%;
+          }
+        }
+      }
+
+      &.touched {
+        > a.submenu::after {
+          content: fa-content($fa-var-minus);
+        }
+      }
 
       &:not(:last-child) {
         margin-right: 1.6rem;
@@ -43,7 +39,8 @@ nav.horizontalNavigation {
 
       > ul {
         position: absolute;
-        //visibility: hidden;
+        height: 0;
+        overflow: hidden;
         width: 100%;
         left: 0;
         right: 0;
@@ -76,14 +73,6 @@ nav.horizontalNavigation {
           padding: 3rem;
           margin-left: 0;
 
-          > a,
-          > span,
-          > strong {
-            font-weight: $ls-font-weight-bold;
-            display: block;
-            border-bottom: 0.1rem solid $ls-border-color-1;
-          }
-
           > ul {
             > li {
               margin-left: 0;
@@ -91,11 +80,17 @@ nav.horizontalNavigation {
           }
         }
       }
+    }
+  }
 
-      &.touched {
-        > ul {
-          //visibility: visible;
-        }
+  &:not(.dropdown) {
+    > ul > li > ul > li {
+      > a,
+      > span,
+      > strong {
+        font-weight: $ls-font-weight-bold;
+        display: block;
+        border-bottom: 0.1rem solid $ls-border-color-1;
       }
     }
   }
@@ -105,7 +100,7 @@ nav.horizontalNavigation {
       > li {
         &:hover {
           > ul {
-            //visibility: visible;
+            height: auto;
           }
         }
       }
@@ -114,6 +109,7 @@ nav.horizontalNavigation {
 
   &.useTouchNaviOnNonTouchDevices {
     li.submenu {
+      > span,
       > strong {
         cursor: pointer;
       }
