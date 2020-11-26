@@ -1,12 +1,3 @@
-@mixin secondLevelUlTouchedOrHover(){
-  width: 100%;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
 @mixin dropdownSecondLevelUlTouchedOrHover(){
   display: flex;
   flex-direction: column;
@@ -92,13 +83,19 @@ nav.horizontalNavigation {
 
       > ul {
         position: absolute;
-        display: none;
+        //visibility: hidden;
+        width: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
         background-color: $ls-color-6;
         box-shadow: $ls-shadow-l;
-        padding: 3.2rem;
+        padding: 0 3rem;
 
         > li {
-          padding: 3.2rem;
+          padding: 3rem;
           margin-left: 0;
 
           > a,
@@ -119,7 +116,7 @@ nav.horizontalNavigation {
 
       &.touched {
         > ul {
-          @include secondLevelUlTouchedOrHover;
+          //visibility: visible;
         }
       }
     }
@@ -130,7 +127,7 @@ nav.horizontalNavigation {
       > li {
         &:hover {
           > ul {
-            @include secondLevelUlTouchedOrHover;
+            //visibility: visible;
           }
         }
       }
@@ -165,7 +162,7 @@ nav.horizontalNavigation.dropdown {
         display: none;
         background-color: $ls-color-6;
         box-shadow: $ls-shadow-l;
-        padding: 3.2rem;
+        padding: 0 3rem;
 
         li {
           padding: 0;
