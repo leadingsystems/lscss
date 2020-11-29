@@ -72,7 +72,7 @@ $grid-gutter-width: 6rem;
 $grid-gutter-width-big: 9rem;
 $grid-gutter-width-small: 3rem;
 $grid-gutter-width-super-small: 1.5rem;
-$grid-breakpoints: (
+$grid-breakpoints-ls: (
   4: 400px,
   5: 500px,
   6: 600px,
@@ -88,7 +88,7 @@ $grid-breakpoints: (
   16: 1600px
 ) !default;
 
-$container-max-widths: (
+$container-max-widths-ls: (
   4: 360px,
   5: 460px,
   6: 560px,
@@ -97,7 +97,7 @@ $container-max-widths: (
   9: 860px,
   10: 960px,
   11: 1060px,
-  12: 1140px,
+  12: 1160px,
   13: 1260px,
   14: 1360px,
   15: 1460px,
