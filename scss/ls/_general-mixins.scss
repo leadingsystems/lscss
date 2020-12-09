@@ -148,3 +148,25 @@
     }
   }
 }
+
+/*
+ * This mixin allows us to set styles like e.g. a background color or a border on a grid cell in a way that the stylable
+ * area is only inside the grid cell's padding without the need to add an actual inside element in the markup.
+ */
+@mixin ls_create-grid-cell-inside($gutter: $grid-gutter-width) {
+  position: relative;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: $gutter / 2;
+    bottom: 0;
+    left: $gutter / 2;
+
+    @content;
+  }
+}
