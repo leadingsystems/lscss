@@ -43,6 +43,12 @@ $ls-off-canvas-navbar-shadow-open: 0 0 0 0.1rem rgba(0,0,0,0);
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
+  transition: opacity 0.5s ease-out;
+
+  body.scrolling-down &,
+  body.scrolling-up &{
+    opacity: 0;
+  }
 
   .nav-bars {
     position: absolute;
