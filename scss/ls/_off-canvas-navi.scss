@@ -45,8 +45,8 @@ $ls-off-canvas-navbar-shadow-open: 0 0 0 0.1rem rgba(0,0,0,0);
   cursor: pointer;
   transition: opacity 0.5s ease-out;
 
-  body.scrolling-down &,
-  body.scrolling-up &{
+  body:not(.show-sticky).scrolling-down &,
+  body:not(.show-sticky).scrolling-up &{
     opacity: 0;
   }
 
