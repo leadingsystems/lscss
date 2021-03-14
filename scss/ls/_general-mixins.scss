@@ -67,6 +67,32 @@
   @include ls_defaultButton_base;
 }
 
+@mixin ls_roundButton_base($line-height: 4rem, $vertical-padding: 1rem, $horizontal-padding: 3rem) {
+  text-transform: uppercase;
+  border: 0.1rem solid $ls-color-black;
+  border-radius: ($line-height + 2 * $vertical-padding) / 2;
+  padding: $vertical-padding $horizontal-padding;
+  line-height: $line-height;
+  display: inline-block;
+
+  &:hover {
+    color: $ls-color-white;
+    background-color: $ls-color-black;
+    transition: 0.8s;
+  }
+
+  &::after {
+    @extend .fas;
+    content: fa-content($fa-var-arrow-right);
+    margin-left: 2rem;
+  }
+}
+
+@mixin ls_roundButton($line-height: 4rem, $vertical-padding: 1rem, $horizontal-padding: 3rem) {
+  @include ls_roundButton_base($line-height, $vertical-padding, $horizontal-padding);
+}
+
+
 @mixin ls_sameLine() {
   > * {
     display: inline-block;
