@@ -170,3 +170,17 @@
     @content;
   }
 }
+
+/*
+ * The following two mixins add vertical spacing between grid cols using the same technique which adds
+ * horizontal spacing by default.
+ */
+@mixin ls_make-row-vertical-spacing($gutter: $grid-gutter-width) {
+  margin-top: -$gutter / 2;
+  margin-bottom: -$gutter / 2;
+}
+
+@mixin ls_make-col-ready-vertical-spacing($gutter: $grid-gutter-width) {
+  padding-top: $gutter / 2;
+  padding-bottom: $gutter / 2;
+}
