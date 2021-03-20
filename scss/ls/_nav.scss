@@ -2,8 +2,13 @@
   @extend .fa;
   content: fa-content($fa-var-caret-down);
   position: absolute;
-  top: 30%;
   font-size: 70%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin iconStyleOpen() {
