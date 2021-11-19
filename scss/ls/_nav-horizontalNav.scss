@@ -65,12 +65,13 @@ nav.horizontalNavigation {
         background-color: $ls-color-6;
         box-shadow: $ls-shadow-l;
 
-        /* -->
+        /*
          * top and bottom padding would not work well with the height animation because if it is not animated
          * separately (which can't be done easily) it appears and disappears instantly which makes the animation
          * seem "jumpy". As a workaround, we only set the desired left and right padding directly on the ul element
          * and we create the upper and lower padding by adding ::before and ::after pseudo elements which create
          * the upper and lower distance with their height.
+         * -->
          */
         padding: 0 3rem;
 
