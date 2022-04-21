@@ -1,0 +1,11 @@
+/* VARIABLES FOR UTILITIES*/
+/* UTILITIES */
+.ls-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.ls-border {
+  border-color: grey;
+  border-width: 1px;
+}
+/*# sourceMappingURL=_utilities.css.map */
