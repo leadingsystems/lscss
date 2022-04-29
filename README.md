@@ -157,12 +157,10 @@ icons but instead they would add a copy of the icon set to their project level l
 5. Import the icon set stylesheet in `lscss-project.scss` with
 `@import "lscss-icons-custom/style.scss";` directly below the import statement for the
 LSCSS core
-6. Open the file `lscss-icons-custom/variables.scss` and make the following modifications:
-    - Rename the variable `$icomoon-font-family` to `$icomoon-font-family-custom`
-    - Rename the variable `$icomoon-font-path` to `$icomoon-font-path-custom`
-    - Set the correct font path which should look something like
-    `$icomoon-font-path-custom: "/files/merconisfiles/themes/theme10/lscss/lscss-icons-custom/fonts" !default;`
-7. Open the file `lscss-icons-custom/style.scss` and change the variable names there accordingly
+6. Open the file `_variables.scss` and add the following line if it does not already exist:
+    - `$icomoon-font-path: "/files/your-path-to/your-custom-icons-folder/fonts" !default;`   
+      (If you use a Merconis theme the path looks like this: `$icomoon-font-path: "/files/merconisfiles/themes/theme10/lscss/lscss-icons-custom/fonts" !default;`)   
+      This overwrites the default path to the fonts in file `your-custom-icons-folder/variables.scss`
 
 Now you can use your project specific custom icons as follows:
 
