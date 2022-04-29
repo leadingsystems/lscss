@@ -144,7 +144,7 @@ of this folder lives inside LSCSS.
 Regular users don't update the icon set in the LSCSS core if they need new or modified
 icons but instead they would add a copy of the icon set to their project level lscss folder.
 
-1. Open the IcoMoon app and create a new icon set/selection
+1. Open the IcoMoon app and import the `selection.json` from the directory `../lscss-icons-custom` or create a new icon set/selection 
 2. Export the icon set using the "generate font" option
 3. Make sure to use the following export settings
     - Font Name: lscss-icons-custom
@@ -154,15 +154,17 @@ icons but instead they would add a copy of the icon set to their project level l
     - CSS Selector - Use a class: .lsi-custom
 4. Download and extract the icon set and copy it into your project level lscss folder
 (e.g. `files/merconisfiles/themes/theme10/lscss/lscss-icons-custom`)
-5. Import the icon set stylesheet in `lscss-project.scss` with
-`@import "lscss-icons-custom/style.scss";` directly below the import statement for the
+
+If the existing icon set lscss-icons-custom has only been updated or extended, this is the end and the following points do not have to be considered.  
+However, if the icon set would be added new, then note the following points.
+
+5. Import the icon set stylesheet in `lscss-project.scss` with `@import "lscss-icons-custom/style.scss";` directly below the import statement for the
 LSCSS core
-6. Open the file `lscss-icons-custom/variables.scss` and make the following modifications:
-    - Rename the variable `$icomoon-font-family` to `$icomoon-font-family-custom`
-    - Rename the variable `$icomoon-font-path` to `$icomoon-font-path-custom`
-    - Set the correct font path which should look something like
-    `$icomoon-font-path-custom: "/files/merconisfiles/themes/theme10/lscss/lscss-icons-custom/fonts" !default;`
-7. Open the file `lscss-icons-custom/style.scss` and change the variable names there accordingly
+6. Open the file `_variables.scss` and add the following line if it does not already exist:
+    - `$icomoon-font-path: "/files/your-path-to/your-custom-icons-folder/fonts" !default;`   
+      This overwrites the default path to the fonts in file `your-custom-icons-folder/variables.scss`  
+      (If a Merconis theme is used, the path looks something like this: `$icomoon-font-path: "/files/merconisfiles/themes/theme10/lscss/lscss-icons-custom/fonts" !default;`)   
+      
 
 Now you can use your project specific custom icons as follows:
 
