@@ -1,6 +1,6 @@
 {
     "name": "leadingsystems/lscss",
-    "description": "Leading Systems LSCSS as a Contao 4 component",
+    "description": "Leading Systems LSCSS as a Contao component",
     "keywords": [
         "leading systems"
     ],
@@ -11,7 +11,8 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "1.0.x-dev",
+            "dev-develop": "1.0.x-dev"
         }
     }
 }
