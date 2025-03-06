@@ -153,7 +153,7 @@ icons but instead they would add a copy of the icon set to their project level l
     - Generate preprocessor variables for Sass
     - CSS Selector - Use a class: .lsi-custom
 4. Download and extract the icon set and copy it into your project level lscss folder
-(e.g. `files/merconisfiles/themes/theme10/lscss/lscss-icons-custom`)
+(e.g. `files/merconisfiles/theme/lscss/lscss-icons-custom`)
 
 If the existing icon set lscss-icons-custom has only been updated or extended, this is the end and the following points do not have to be considered.  
 However, if the icon set would be added new, then note the following points.
@@ -163,7 +163,7 @@ LSCSS core
 6. Open the file `_variables.scss` and add the following line if it does not already exist:
     - `$icomoon-font-path: "/files/your-path-to/your-custom-icons-folder/fonts" !default;`   
       This overwrites the default path to the fonts in file `your-custom-icons-folder/variables.scss`  
-      (If a Merconis theme is used, the path looks something like this: `$icomoon-font-path: "/files/merconisfiles/themes/theme10/lscss/lscss-icons-custom/fonts" !default;`)   
+      (If a Merconis theme is used, the path looks something like this: `$icomoon-font-path: "/files/merconisfiles/theme/lscss/lscss-icons-custom/fonts" !default;`)   
       
 
 Now you can use your project specific custom icons as follows:
